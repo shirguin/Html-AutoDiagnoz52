@@ -28,9 +28,6 @@
             fontFamily: {
               inter: ["Inter", "sans - serif"],
             },
-            transitionProperty: {
-              width: "width",
-            },
           },
         },
       };
@@ -54,69 +51,15 @@
             </a>
           </div>
 
-          <!-- Иконка гамбургер меню -->
-          <!-- <a href="#">
+          <a href="#">
             <img src="./img/hamburger-md.svg" alt="icon" />
-          </a> -->
-          <div class="cursor-pointer">
-            <img onclick="Open()" src="./img/hamburger-md.svg" alt="icon" />
-          </div>
+          </a>
         </div>
       </div>
 
       <div class="flex items-center justify-center gap-2 mt-5">
         <img src="./img/icon_telephone_1.svg" alt="icon" />
         <h3 class="font-inter text-lg text-mainWhite">+7 952 459 68 88</h3>
-      </div>
-
-      <!-- Гамбургер меню -->
-      <div
-        class="fixed transition-width duration-500 transition-slowest ease w-0 pb-5 text-mainWhite flex flex-col justify-left items-left bg-mainBlack overflow-hidden"
-        id="hamburger_menu"
-      >
-        <!-- Кнопка закрывания меню -->
-
-        <div class="flex justify-end pr-4 cursor-pointer">
-          <img onclick="Close()" src="./img/icon_close.svg" alt="icon" />
-        </div>
-
-        <nav class="">
-          <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
-          >
-            <a href="#">Купить</a>
-          </li>
-
-          <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
-          >
-            <a href="#">Продать</a>
-          </li>
-
-          <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
-          >
-            <a href="#">Автподбор</a>
-          </li>
-
-          <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
-          >
-            <a href="#">Видео</a>
-          </li>
-
-          <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
-          >
-            <a href="#">Кейсы</a>
-          </li>
-
-          <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
-          >
-            <a href="#">Контакты</a>
-          </li>
-        </nav>
       </div>
     </header>
 
@@ -210,17 +153,5 @@
         </div>
       </section>
     </main>
-
-    <script>
-      let ham = document.getElementById("hamburger_menu");
-
-      function Open() {
-        ham.classList.add("w-[320px]");
-      }
-
-      function Close() {
-        ham.classList.remove("w-[320px]");
-      }
-    </script>
   </body>
 </html>
