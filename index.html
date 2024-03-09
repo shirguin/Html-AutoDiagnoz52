@@ -24,12 +24,14 @@
               mainBlack: "#000000",
               mainRed: "#B91C23",
               secondRed: "#530D10",
+              currentColor: "#FFFFFF",
             },
             fontFamily: {
               inter: ["Inter", "sans - serif"],
             },
             transitionProperty: {
-              width: "width",
+              left: "left",
+              color: "color",
             },
           },
         },
@@ -37,7 +39,7 @@
     </script>
   </head>
   <body class="flex flex-col items-center bg-mainBlack">
-    <header class="flex flex-col w-[360px] px-5 mt-[25px]">
+    <header class="relative flex flex-col w-[360px] px-5 mt-[25px]">
       <div class="flex items-center justify-between px-5">
         <a href="/">
           <img src="./img/logo 3.svg" alt="logo_3" />
@@ -46,7 +48,37 @@
         <div class="flex items-center gap-3">
           <div class="flex items-center gap-2">
             <a href="https://t.me/autodiagnoz52" target="_blank">
-              <img src="./img/icon_telegram.svg" alt="icon" />
+              <svg
+                class="group"
+                width="40px"
+                height="40px"
+                viewBox="0 0 256 256"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                preserveAspectRatio="xMidYMid"
+              >
+                <g>
+                  <path
+                    class="group-hover:fill-mainWhite hover:transition-color duration-300"
+                    d="M128,0 C57.307,0 0,57.307 0,128 L0,128 C0,198.693 57.307,256 128,256 L128,256 C198.693,256 256,198.693 256,128 L256,128 C256,57.307 198.693,0 128,0 L128,0 Z"
+                    fill="#B91C23"
+                  ></path>
+                  <path
+                    class="group-hover:fill-mainRed hover:transition-color duration-300"
+                    d="M190.2826,73.6308 L167.4206,188.8978 C167.4206,188.8978 164.2236,196.8918 155.4306,193.0548 L102.6726,152.6068 L83.4886,143.3348 L51.1946,132.4628 C51.1946,132.4628 46.2386,130.7048 45.7586,126.8678 C45.2796,123.0308 51.3546,120.9528 51.3546,120.9528 L179.7306,70.5928 C179.7306,70.5928 190.2826,65.9568 190.2826,73.6308"
+                    fill="#FFFFFF"
+                  ></path>
+                  <path
+                    d="M98.6178,187.6035 C98.6178,187.6035 97.0778,187.4595 95.1588,181.3835 C93.2408,175.3085 83.4888,143.3345 83.4888,143.3345 L161.0258,94.0945 C161.0258,94.0945 165.5028,91.3765 165.3428,94.0945 C165.3428,94.0945 166.1418,94.5735 163.7438,96.8115 C161.3458,99.0505 102.8328,151.6475 102.8328,151.6475"
+                    fill="#D2E5F1"
+                  ></path>
+                  <path
+                    d="M122.9015,168.1154 L102.0335,187.1414 C102.0335,187.1414 100.4025,188.3794 98.6175,187.6034 L102.6135,152.2624"
+                    fill="#B5CFE4"
+                  ></path>
+                </g>
+              </svg>
             </a>
 
             <a href="#">
@@ -55,68 +87,92 @@
           </div>
 
           <!-- Иконка гамбургер меню -->
-          <!-- <a href="#">
-            <img src="./img/hamburger-md.svg" alt="icon" />
-          </a> -->
           <div class="cursor-pointer">
-            <img onclick="Open()" src="./img/hamburger-md.svg" alt="icon" />
+            <svg
+              class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
+              onclick="Open()"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+              />
+            </svg>
           </div>
         </div>
       </div>
 
-      <div class="flex items-center justify-center gap-2 mt-5">
-        <img src="./img/icon_telephone_1.svg" alt="icon" />
-        <h3 class="font-inter text-lg text-mainWhite">+7 952 459 68 88</h3>
-      </div>
-
       <!-- Гамбургер меню -->
       <div
-        class="fixed transition-width duration-500 transition-slowest ease w-0 pb-5 text-mainWhite flex flex-col justify-left items-left bg-mainBlack overflow-hidden"
+        class="absolute top-0 left-[-800px] transition-left duration-500 transition-slowest ease w-[320px] pb-[62px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack md:hidden"
         id="hamburger_menu"
       >
         <!-- Кнопка закрывания меню -->
-
         <div class="flex justify-end pr-4 cursor-pointer">
-          <img onclick="Close()" src="./img/icon_close.svg" alt="icon" />
+          <svg
+            class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10"
+            onclick="Close()"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18 18 6M6 6l12 12"
+            />
+          </svg>
         </div>
 
         <nav class="">
           <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
+            class="list-none w-[280px] pb-3.5 ml-5 mt-[27px] border-b-[3px] border-mainBlack font-inter text-5xl font-semibold leading-[58px] tracking-normal hover:text-mainRed hover:transition-color duration-300 hover:border-mainRed"
           >
             <a href="#">Купить</a>
           </li>
 
           <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
+            class="list-none w-[280px] pb-3.5 ml-5 mt-[27px] border-b-[3px] border-mainBlack font-inter text-5xl font-semibold leading-[58px] tracking-normal hover:text-mainRed hover:transition-color duration-300 hover:border-mainRed"
           >
             <a href="#">Продать</a>
           </li>
 
           <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
+            class="list-none w-[280px] pb-3.5 ml-5 mt-[27px] border-b-[3px] border-mainBlack font-inter text-5xl font-semibold leading-[58px] tracking-normal hover:text-mainRed hover:transition-color duration-300 hover:border-mainRed"
           >
             <a href="#">Автподбор</a>
           </li>
 
           <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
+            class="list-none w-[280px] pb-3.5 ml-5 mt-[27px] border-b-[3px] border-mainBlack font-inter text-5xl font-semibold leading-[58px] tracking-normal hover:text-mainRed hover:transition-color duration-300 hover:border-mainRed"
           >
             <a href="#">Видео</a>
           </li>
 
           <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
+            class="list-none w-[280px] pb-3.5 ml-5 mt-[27px] border-b-[3px] border-mainBlack font-inter text-5xl font-semibold leading-[58px] tracking-normal hover:text-mainRed hover:transition-color duration-300 hover:border-mainRed"
           >
             <a href="#">Кейсы</a>
           </li>
 
           <li
-            class="list-none w-[280px] py-3.5 ml-5 mt-[27px] border-b-[3px] border-mainRed font-inter text-5xl font-semibold leading-[58px] tracking-normal"
+            class="list-none w-[280px] pb-3.5 ml-5 mt-[27px] border-b-[3px] border-mainBlack font-inter text-5xl font-semibold leading-[58px] tracking-normal hover:text-mainRed hover:transition-color duration-300 hover:border-mainRed"
           >
             <a href="#">Контакты</a>
           </li>
         </nav>
+      </div>
+
+      <div class="flex items-center justify-center gap-2 mt-5">
+        <img src="./img/icon_telephone_1.svg" alt="icon" />
+        <h3 class="font-inter text-lg text-mainWhite">+7 952 459 68 88</h3>
       </div>
     </header>
 
@@ -141,7 +197,7 @@
         />
 
         <div
-          class="mb-10 w-[340px] bg-mainRed px-7 pt-7 rounded-[15px] bg-gradient-to-r from-mainRed to-secondRed"
+          class="mb-10 w-[340px] sm:w-[470px] bg-mainRed px-7 pt-7 rounded-[15px] bg-gradient-to-r from-mainRed to-secondRed"
         >
           <h3
             class="w-[310px] font-inter text-lg font-black leading-5 text-mainWhite"
@@ -202,7 +258,7 @@
             />
 
             <button
-              class="mt-2 w-[200px] h-10 bg-mainBlack rounded-[5px] font-inter text-[12px] font-semibold leading-4 tracking-normal text-mainWhite uppercase"
+              class="mt-2 w-[200px] h-10 bg-mainBlack rounded-[5px] font-inter text-[12px] font-semibold leading-4 tracking-normal text-mainWhite uppercase hover:text-mainBlack hover:bg-mainWhite hover:transition-color duration-300"
             >
               Оставить заявку
             </button>
@@ -215,11 +271,11 @@
       let ham = document.getElementById("hamburger_menu");
 
       function Open() {
-        ham.classList.add("w-[320px]");
+        ham.classList.add("left-5");
       }
 
       function Close() {
-        ham.classList.remove("w-[320px]");
+        ham.classList.remove("left-5");
       }
     </script>
   </body>
