@@ -856,40 +856,24 @@ video {
   height: 2.5rem;
 }
 
-.h-\[218px\] {
-  height: 218px;
-}
-
-.h-\[273px\] {
-  height: 273px;
-}
-
-.h-\[374px\] {
-  height: 374px;
-}
-
-.h-\[525px\] {
-  height: 525px;
+.h-\[280px\] {
+  height: 280px;
 }
 
 .w-10 {
   width: 2.5rem;
 }
 
-.w-\[1170px\] {
-  width: 1170px;
-}
-
 .w-\[200px\] {
   width: 200px;
 }
 
-.w-\[220px\] {
-  width: 220px;
-}
-
 .w-\[266px\] {
   width: 266px;
+}
+
+.w-\[270px\] {
+  width: 270px;
 }
 
 .w-\[280px\] {
@@ -902,14 +886,6 @@ video {
 
 .w-\[360px\] {
   width: 360px;
-}
-
-.w-\[470px\] {
-  width: 470px;
-}
-
-.w-\[738px\] {
-  width: 738px;
 }
 
 .w-\[this-is\\\\\] {
@@ -1938,6 +1914,10 @@ video {
   background-image: url('./img/background_car_blur.jpeg');
 }
 
+.bg-\[url\(\'\.\/img\/main_background_car\.jpg\'\)\] {
+  background-image: url('./img/main_background_car.jpg');
+}
+
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
@@ -1972,6 +1952,10 @@ video {
           box-decoration-break: clone;
 }
 
+.bg-contain {
+  background-size: contain;
+}
+
 .bg-fixed {
   background-attachment: fixed;
 }
@@ -1999,6 +1983,10 @@ video {
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.bg-bottom {
+  background-position: bottom;
 }
 
 .bg-center {
@@ -2327,11 +2315,6 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-green-500 {
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
 }
 
 .text-mainGray {
@@ -2689,6 +2672,12 @@ video {
   forced-color-adjust: none;
 }
 
+@font-face {
+  font-family: "Inter";
+
+  src: local("Inter"), url("/fonts/inter-woff2/font.woff2") format("woff2");
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;
@@ -2794,10 +2783,6 @@ video {
     margin-top: 1.5rem;
   }
 
-  .sm\:block {
-    display: block;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -2808,6 +2793,10 @@ video {
 
   .sm\:h-\[192px\] {
     height: 192px;
+  }
+
+  .sm\:h-\[320px\] {
+    height: 320px;
   }
 
   .sm\:w-\[200px\] {
@@ -2837,20 +2826,16 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-0 {
-    margin-top: 0px;
+  .md\:mt-3 {
+    margin-top: 0.75rem;
   }
 
   .md\:mt-\[60px\] {
     margin-top: 60px;
   }
 
-  .md\:block {
-    display: block;
-  }
-
-  .md\:hidden {
-    display: none;
+  .md\:h-\[425px\] {
+    height: 425px;
   }
 
   .md\:h-\[96px\] {
@@ -2900,10 +2885,6 @@ video {
     margin-top: 96px;
   }
 
-  .xl\:block {
-    display: block;
-  }
-
   .xl\:flex {
     display: flex;
   }
@@ -2918,6 +2899,10 @@ video {
 
   .xl\:h-\[60px\] {
     height: 60px;
+  }
+
+  .xl\:h-\[610px\] {
+    height: 610px;
   }
 
   .xl\:w-\[1100px\] {
@@ -2963,6 +2948,10 @@ video {
     font-size: 15px;
   }
 
+  .xl\:text-\[16px\] {
+    font-size: 16px;
+  }
+
   .xl\:text-\[26px\] {
     font-size: 26px;
   }
@@ -2983,8 +2972,106 @@ video {
     line-height: 2rem;
   }
 
+  .xl\:leading-\[19px\] {
+    line-height: 19px;
+  }
+
   .xl\:leading-\[97px\] {
     line-height: 97px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:mb-\[75px\] {
+    margin-bottom: 75px;
+  }
+
+  .\32xl\:mt-\[20px\] {
+    margin-top: 20px;
+  }
+
+  .\32xl\:mt-\[36px\] {
+    margin-top: 36px;
+  }
+
+  .\32xl\:mt-\[72px\] {
+    margin-top: 72px;
+  }
+
+  .\32xl\:h-\[200px\] {
+    height: 200px;
+  }
+
+  .\32xl\:h-\[740px\] {
+    height: 740px;
+  }
+
+  .\32xl\:h-\[80px\] {
+    height: 80px;
+  }
+
+  .\32xl\:w-\[1113px\] {
+    width: 1113px;
+  }
+
+  .\32xl\:w-\[1575px\] {
+    width: 1575px;
+  }
+
+  .\32xl\:w-\[340px\] {
+    width: 340px;
+  }
+
+  .\32xl\:w-\[425px\] {
+    width: 425px;
+  }
+
+  .\32xl\:pt-\[85px\] {
+    padding-top: 85px;
+  }
+
+  .\32xl\:text-\[100px\] {
+    font-size: 100px;
+  }
+
+  .\32xl\:text-\[16px\] {
+    font-size: 16px;
+  }
+
+  .\32xl\:text-\[18px\] {
+    font-size: 18px;
+  }
+
+  .\32xl\:text-\[35px\] {
+    font-size: 35px;
+  }
+
+  .\32xl\:text-\[40px\] {
+    font-size: 40px;
+  }
+
+  .\32xl\:leading-10 {
+    line-height: 2.5rem;
+  }
+
+  .\32xl\:leading-5 {
+    line-height: 1.25rem;
+  }
+
+  .\32xl\:leading-\[121px\] {
+    line-height: 121px;
+  }
+
+  .\32xl\:leading-\[22px\] {
+    line-height: 22px;
+  }
+
+  .\32xl\:leading-\[48px\] {
+    line-height: 48px;
+  }
+
+  .\32xl\:tracking-tighter {
+    letter-spacing: -0.05em;
   }
 }
 

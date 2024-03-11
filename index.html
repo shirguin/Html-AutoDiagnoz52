@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
       rel="stylesheet"
-    />
+    /> -->
 
     <link href="./output.css" rel="stylesheet" />
 
@@ -43,7 +43,7 @@
 
   <body class="flex flex-col items-center bg-mainBlack">
     <header
-      class="relative flex flex-col pt-2.5 w-[360px] sm:w-[470px] md:w-[738px] xl:w-[1170px]"
+      class="relative flex flex-col pt-2.5 w-[360px] sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
     >
       <div class="flex items-center justify-between px-5 sm:px-0">
         <!-- Логотип -->
@@ -467,64 +467,42 @@
 
     <main>
       <section
-        class="flex flex-col items-center mt-10 md:mt-[60px] xl:mt-[96px]"
+        class="flex flex-col items-center mt-10 md:mt-[60px] xl:mt-[96px] 2xl:mt-[72px]"
       >
-        <!-- Заголовок h1 -->
-        <div
-          class="md:w-[738px] xl:w-[1170px] flex flex-col items-center md:items-start"
-        >
-          <h1
-            class="font-inter text-5xl md:text-7xl xl:text-[80px] font-medium leading-[61px] md:leading-[85px] xl:leading-[97px] text-blue-500"
-          >
-            Автоподбор
-          </h1>
-
-          <h2
-            class="font-inter text-center text-2xl xl:text-3xl font-medium text-mainWhite mt-1 pb-1 bg-mainRed w-[266px] xl:w-[319px]"
-          >
-            в Нижнем Новгороде
-          </h2>
-        </div>
-
         <!-- Фото автомобиля -->
-        <div>
-          <img
-            class="w-[360px] h-[218px] sm:hidden"
-            src="./img/background_car.jpg"
-            alt="foto car"
-          />
+        <div
+          class="w-[340px] h-[280px] sm:w-[470px] sm:h-[320px] md:w-[738px] md:h-[425px] xl:w-[1170px] xl:h-[610px] 2xl:w-[1575px] 2xl:h-[740px] bg-[url('./img/main_background_car.jpg')] bg-contain bg-no-repeat bg-bottom"
+        >
+          <!-- Заголовок h1 -->
+          <div
+            class="md:w-[738px] xl:w-[1170px] flex flex-col items-center md:items-start"
+          >
+            <h1
+              class="font-inter text-5xl md:text-7xl xl:text-[80px] 2xl:text-[100px] font-medium leading-[61px] md:leading-[85px] xl:leading-[97px] 2xl:leading-[121px] 2xl:tracking-tighter text-mainWhite"
+            >
+              Автоподбор
+            </h1>
 
-          <img
-            class="w-[470px] h-[273px] hidden sm:block md:hidden"
-            src="./img/background_car_sm.jpg"
-            alt="foto car"
-          />
-
-          <img
-            class="w-[738px] h-[374px] hidden md:block xl:hidden"
-            src="./img/background_car_md.jpg"
-            alt="foto car"
-          />
-
-          <img
-            class="w-[1170px] h-[525px] hidden xl:block"
-            src="./img/background_car_xl.jpg"
-            alt="foto car"
-          />
+            <h2
+              class="font-inter text-center text-2xl xl:text-3xl 2xl:text-[40px] font-medium 2xl:leading-[48px] text-mainWhite mt-1 pb-1 bg-mainRed w-[266px] xl:w-[319px] 2xl:w-[425px]"
+            >
+              в Нижнем Новгороде
+            </h2>
+          </div>
         </div>
 
         <!-- Блок заявки на Автоподбор -->
         <div
-          class="flex flex-col mt-10 md:mt-0 mb-10 w-[340px] sm:w-[470px] md:w-[738px] xl:w-[1170px] bg-mainRed px-7 xl:px-[60px] pt-7 xl:pt-[60px] rounded-[15px] bg-gradient-to-r from-mainRed to-secondRed"
+          class="flex flex-col mt-5 md:mt-3 mb-10 w-[340px] sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px] bg-mainRed px-7 xl:px-[60px] pt-7 xl:pt-[60px] 2xl:pt-[85px] rounded-[15px] bg-gradient-to-r from-mainRed to-secondRed"
         >
           <h3
-            class="w-[280px] sm:w-[440px] md:w-[738px] xl:w-[1170px] font-inter text-lg xl:text-[26px] font-black leading-5 xl:leading-8 text-mainWhite uppercase"
+            class="w-[270px] sm:w-[440px] md:w-[738px] xl:w-[1170px] font-inter text-lg xl:text-[26px] 2xl:text-[35px] font-black leading-5 xl:leading-8 2xl:leading-10 text-mainWhite uppercase"
           >
             Выберите автомобиль, который хотели&nbsp;бы приобрести
           </h3>
 
           <p
-            class="mt-2 w-[220px] sm:w-[440px] md:w-[728px] xl:w-[1100px] font-inter text-[10px] xl:text-[15px] font-normal leading-3 xl:leading-5 tracking-normal text-mainWhite"
+            class="mt-2 w-[280px] sm:w-[440px] md:w-[728px] xl:w-[1100px] 2xl:w-[1113px] font-inter text-[10px] xl:text-[15px] 2xl:text-[18px] font-normal leading-3 xl:leading-5 2xl:leading-[22px] tracking-normal text-mainWhite"
           >
             Подберём юридически чистый и&nbsp;технически исправный автомобиль
             с&nbsp;учётом ваших предпочтений. При первом обращении дарим
@@ -534,18 +512,18 @@
 
           <!-- форма заявки -->
           <form
-            class="flex flex-col flex-wrap sm:h-[192px] md:h-[96px] xl:h-[148px] mt-2 sm:mt-6 mb-20 xl:mb-[60px] sm:mb-11"
+            class="flex flex-col flex-wrap sm:h-[192px] md:h-[96px] xl:h-[148px] 2xl:h-[200px] mt-2 sm:mt-6 2xl:mt-[36px] mb-20 sm:mb-11 xl:mb-[60px] 2xl:mb-[75px]"
             action=""
           >
             <div class="flex flex-col">
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Марка"
               />
 
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Модель"
               />
@@ -553,13 +531,13 @@
 
             <div class="flex flex-col">
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Поколение"
               />
 
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Год"
               />
@@ -567,13 +545,13 @@
 
             <div class="flex flex-col">
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Бюджет"
               />
 
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Ваше имя"
               />
@@ -581,13 +559,13 @@
 
             <div class="flex flex-col">
               <input
-                class="mt-2 xl:mt-[14px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] font-semibold leading-3 xl:leading-4 tracking-normal text-mainGray"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                 type="text"
                 placeholder="Телефон"
               />
 
               <button
-                class="mt-2 xl:mt-[14px] w-[200px] md:w-[160px] xl:w-[250px] h-10 xl:h-[60px] bg-mainBlack rounded-[5px] font-inter text-[12px] font-semibold leading-4 tracking-normal text-mainWhite uppercase hover:text-mainBlack hover:bg-mainWhite hover:transition-color duration-300"
+                class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] bg-mainBlack rounded-[5px] font-inter text-[12px] xl:text-[16px] 2xl:text-[18px] font-semibold leading-4 xl:leading-[19px] 2xl:leading-[22px] tracking-normal text-mainWhite uppercase hover:text-mainBlack hover:bg-mainWhite hover:transition-color duration-300"
               >
                 Оставить заявку
               </button>
