@@ -2164,6 +2164,18 @@ video {
   font-family: Inter, sans - serif;
 }
 
+.font-lobster {
+  font-family: Lobster, sans-serif;
+}
+
+.font-sans {
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -2180,6 +2192,10 @@ video {
 
 .text-\[12px\] {
   font-size: 12px;
+}
+
+.text-\[24px\] {
+  font-size: 24px;
 }
 
 .text-base {
@@ -2675,8 +2691,51 @@ video {
 @font-face {
   font-family: "Inter";
 
-  src: local("Inter"), url("/fonts/inter-woff2/font.woff2") format("woff2");
+  font-style: normal;
+
+  font-weight: normal;
+
+  src: local("Inter"), url("/fonts/Inter-Regulat.woff2") format("woff2"),
+    url("/fonts/Inter-Regular.woff") format("woff"),
+    url("/fonts/Inter-Regular.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: bold;
+
+  src: local("Inter"), url("/fonts/Inter-Black.woff2") format("woff2"),
+    url("/fonts/Inter-Black.woff") format("woff"),
+    url("/fonts/Inter-Black.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Inter";
+
+  font-style: normal;
+
+  font-weight: medium;
+
+  src: local("Inter"), url("/fonts/Inter-Medium.woff2") format("woff2"),
+    url("/fonts/Inter-Medium.woff") format("woff"),
+    url("/fonts/Inter-Medium.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "Lobster";
+
+  font-style: normal;
+
+  font-weight: normal;
+
+  src: local("Lobster"),
+    url("/fonts/Lobster-Regular.ttf");
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap') */
 
 @media (min-width: 640px) {
   .sm\:container {

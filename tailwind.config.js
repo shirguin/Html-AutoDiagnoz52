@@ -2,9 +2,7 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-    fontFamily: {
-      inter: ["Inter", "sans - serif"],
-    },
+
     extend: {
       colors: {
         mainWhite: "#FFFFFF",
@@ -18,6 +16,10 @@ module.exports = {
         left: "left",
         color: "color",
       },
+      fontFamily:{
+        inter: ["Inter", "sans - serif"],
+        lobster:["Lobster", "sans-serif"],
+      }
     },
   },
   plugins: [],

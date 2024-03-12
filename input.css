@@ -28,3 +28,13 @@
     url("/fonts/Inter-Medium.woff") format("woff"),
     url("/fonts/Inter-Medium.ttf") format("ttf");
 }
+
+@font-face {
+  font-family: "Lobster";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Lobster"),
+    url("/fonts/Lobster-Regular.ttf");
+}
+
+/* @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap') */
