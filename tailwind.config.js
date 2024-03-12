@@ -17,7 +17,7 @@ module.exports = {
         color: "color",
       },
       fontFamily:{
-        inter: ["Inter", "sans - serif"],
+        inter: ["Inter", "sans-serif"],
         lobster:["Lobster", "sans-serif"],
       }
     },
