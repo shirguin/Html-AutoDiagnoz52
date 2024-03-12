@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
+    fontFamily: {
+      inter: ["Inter", "sans - serif"],
+    },
     extend: {
       colors: {
         mainWhite: "#FFFFFF",
@@ -10,9 +13,6 @@ module.exports = {
         mainRed: "#B91C23",
         secondRed: "#530D10",
         currentColor: "#FFFFFF",
-      },
-      fontFamily: {
-        inter: ["Inter", "sans - serif"],
       },
       transitionProperty: {
         left: "left",
