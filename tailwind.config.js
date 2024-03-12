@@ -2,8 +2,10 @@
 module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
-
     extend: {
+      screens: {
+        mobile: "360px",
+      },
       colors: {
         mainWhite: "#FFFFFF",
         mainGray: "#6C6C6C",
@@ -16,10 +18,10 @@ module.exports = {
         left: "left",
         color: "color",
       },
-      fontFamily:{
+      fontFamily: {
         inter: ["Inter", "sans-serif"],
-        lobster:["Lobster", "sans-serif"],
-      }
+        lobster: ["Lobster", "sans-serif"],
+      },
     },
   },
   plugins: [],

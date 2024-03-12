@@ -27,12 +27,12 @@
   </head>
 
   <body class="flex flex-col items-center bg-mainBlack">
-    <div class="flex flex-col items-center w-full max-w-[470px] px-2.5">
+    <div class="flex flex-col items-center px-2.5 mobile:w-full sm:w-[470px]">
       <header
-        class="relative flex flex-col pt-2.5 w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
+        class="relative flex flex-col pt-2.5 mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
       >
         <!-- Шапка -->
-        <div class="flex items-center justify-between px-5 sm:px-0">
+        <div class="flex items-center justify-between">
           <!-- Логотип -->
           <a href="#">
             <svg
@@ -371,7 +371,7 @@
 
         <!-- Гамбургер меню -->
         <div
-          class="absolute top-0 left-[-1280px] transition-left duration-500 transition-slowest ease bg-[url('./img/background_car_blur.jpeg')] bg-no-repeat bg-center bg-left pt-2.5 pb-[62px] w-[360px] sm:w-[490px] md:w-[748px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack xl:hidden"
+          class="absolute top-0 left-[-1280px] transition-left duration-500 transition-slowest ease bg-[url('./img/background_car_blur.jpeg')] bg-no-repeat bg-center bg-left pt-2.5 pb-[62px] mobile:w-full sm:w-[490px] md:w-[748px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack xl:hidden"
           id="hamburger_menu"
         >
           <!-- Кнопка закрывания меню -->
@@ -452,13 +452,14 @@
         </div>
       </header>
 
-      <main class="w-full">
+      <main class="mobile:w-full">
+        <!-- Первый блок -->
         <section
-          class="flex flex-col w-full items-center mt-10 md:mt-[60px] xl:mt-[96px] 2xl:mt-[72px]"
+          class="flex flex-col items-center mobile:w-full mt-10 md:mt-[60px] xl:mt-[96px] 2xl:mt-[72px]"
         >
           <!-- Фото автомобиля -->
           <div
-            class="w-full h-[280px] sm:w-[470px] sm:h-[320px] md:w-[738px] md:h-[425px] xl:w-[1170px] xl:h-[610px] 2xl:w-[1575px] 2xl:h-[740px] bg-[url('./img/main_background_car.jpg')] bg-contain bg-no-repeat bg-bottom"
+            class="mobile:w-3/4 h-[300px] sm:w-[470px] sm:h-[320px] md:w-[738px] md:h-[425px] xl:w-[1170px] xl:h-[610px] 2xl:w-[1575px] 2xl:h-[740px] bg-[url('./img/main_background_car.jpg')] bg-contain bg-no-repeat bg-bottom"
           >
             <!-- Заголовок h1 -->
             <div
@@ -480,16 +481,16 @@
 
           <!-- Блок заявки на Автоподбор -->
           <div
-            class="flex flex-col mt-5 md:mt-3 mb-10 w-full min-w-[340px] max-w-[450px] sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px] bg-mainRed px-7 xl:px-[60px] pt-7 xl:pt-[60px] 2xl:pt-[85px] rounded-[15px] bg-gradient-to-r from-mainRed to-secondRed"
+            class="flex flex-col mt-5 md:mt-3 mb-10 mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px] bg-mainRed px-7 xl:px-[60px] pt-7 xl:pt-[60px] 2xl:pt-[85px] rounded-[15px] bg-gradient-to-r from-mainRed to-secondRed"
           >
             <h3
-              class="w-full min-w-[280px] max-w-[390px] sm:w-[440px] md:w-[738px] xl:w-[1170px] font-inter text-lg xl:text-[26px] 2xl:text-[35px] font-black leading-5 xl:leading-8 2xl:leading-10 text-mainWhite uppercase"
+              class="mobile:w-full sm:w-[440px] md:w-[738px] xl:w-[1170px] font-inter text-lg xl:text-[26px] 2xl:text-[35px] font-black leading-5 xl:leading-8 2xl:leading-10 text-mainWhite uppercase"
             >
               Выберите автомобиль, который хотели&nbsp;бы приобрести
             </h3>
 
             <p
-              class="mt-2 w-full min-w-[280px] max-w-[390px] sm:w-[440px] md:w-[728px] xl:w-[1100px] 2xl:w-[1113px] font-inter text-[10px] xl:text-[15px] 2xl:text-[18px] font-normal leading-3 xl:leading-5 2xl:leading-[22px] tracking-normal text-mainWhite"
+              class="mt-2 mobile:w-full sm:w-[410px] md:w-[666px] xl:w-[1054px] 2xl:w-[1113px] font-inter text-[10px] xl:text-[15px] 2xl:text-[18px] font-normal leading-3 xl:leading-5 2xl:leading-[22px] tracking-normal text-mainWhite"
             >
               Подберём юридически чистый и&nbsp;технически исправный автомобиль
               с&nbsp;учётом ваших предпочтений. При первом обращении дарим
@@ -499,56 +500,63 @@
 
             <!-- форма заявки -->
             <form
-              class="flex flex-col flex-wrap sm:h-[192px] md:h-[96px] xl:h-[148px] 2xl:h-[200px] mt-2 sm:mt-6 2xl:mt-[36px] mb-20 sm:mb-11 xl:mb-[60px] 2xl:mb-[75px] border"
+              class="flex flex-col flex-wrap mobile:w-full sm:h-[192px] md:h-[96px] xl:h-[148px] 2xl:h-[200px] mt-2 sm:mt-6 2xl:mt-[36px] mb-20 sm:mb-11 xl:mb-[60px] 2xl:mb-[75px]"
               action=""
             >
-              <div class="flex flex-col items-center border ">
+              <div class="flex flex-col">
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] min-w-[280px] max-w-[380px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Марка"
+                  name="brand"
                 />
 
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Модель"
+                  name="model"
                 />
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col">
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Поколение"
+                  name="car_generation"
                 />
 
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Год"
+                  name="year"
                 />
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col">
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Бюджет"
+                  name="budget"
                 />
 
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Ваше имя"
+                  name="user_name"
                 />
               </div>
 
-              <div class="flex flex-col items-center">
+              <div class="flex flex-col">
                 <input
-                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] w-[280px] sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
+                  class="mt-2 xl:mt-[14px] 2xl:mt-[20px] mobile:w-full sm:w-[200px] md:w-[160px] xl:w-[250px] 2xl:w-[340px] h-10 xl:h-[60px] 2xl:h-[80px] px-5 xl:px-6 rounded-[5px] font-inter text-[12px] xl:text-[14px] 2xl:text-[16px] font-semibold leading-3 xl:leading-4 2xl:leading-5 tracking-normal text-mainGray"
                   type="text"
                   placeholder="Телефон"
+                  name="telephone"
                 />
 
                 <button
@@ -561,8 +569,13 @@
           </div>
         </section>
 
+        <!-- Второй блок -->
+        <section
+          class="flex flex-col items-center mobile:w-full mt-10 md:mt-[60px] xl:mt-[96px] 2xl:mt-[72px]"
+        ></section>
+
         <!-- Шрифты -->
-        <section class="mt-[200px]">
+        <section class="w-full mt-[200px]">
           <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
             Принимая во внимание
           </h1>

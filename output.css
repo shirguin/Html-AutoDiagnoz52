@@ -548,6 +548,12 @@ video {
   width: 100%;
 }
 
+@media (min-width: 360px) {
+  .container {
+    max-width: 360px;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
@@ -749,6 +755,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-\[200px\] {
+  margin-top: 200px;
+}
+
 .mt-\[27px\] {
   margin-top: 27px;
 }
@@ -856,8 +866,8 @@ video {
   height: 2.5rem;
 }
 
-.h-\[280px\] {
-  height: 280px;
+.h-\[300px\] {
+  height: 300px;
 }
 
 .w-10 {
@@ -872,20 +882,8 @@ video {
   width: 266px;
 }
 
-.w-\[270px\] {
-  width: 270px;
-}
-
 .w-\[280px\] {
   width: 280px;
-}
-
-.w-\[340px\] {
-  width: 340px;
-}
-
-.w-\[360px\] {
-  width: 360px;
 }
 
 .w-\[this-is\\\\\] {
@@ -898,6 +896,10 @@ video {
 
 .w-\[weird-and-invalid\] {
   width: weird-and-invalid;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-shrink {
@@ -2058,6 +2060,16 @@ video {
      object-fit: scale-down;
 }
 
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.px-2\.5 {
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -2726,6 +2738,12 @@ video {
     width: 100%;
   }
 
+  @media (min-width: 360px) {
+    .sm\:container {
+      max-width: 360px;
+    }
+  }
+
   @media (min-width: 640px) {
     .sm\:container {
       max-width: 640px;
@@ -2817,6 +2835,16 @@ video {
   fill: #FFFFFF;
 }
 
+@media (min-width: 360px) {
+  .mobile\:w-3\/4 {
+    width: 75%;
+  }
+
+  .mobile\:w-full {
+    width: 100%;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:mb-11 {
     margin-bottom: 2.75rem;
@@ -2846,6 +2874,10 @@ video {
     width: 200px;
   }
 
+  .sm\:w-\[410px\] {
+    width: 410px;
+  }
+
   .sm\:w-\[440px\] {
     width: 440px;
   }
@@ -2856,11 +2888,6 @@ video {
 
   .sm\:w-\[490px\] {
     width: 490px;
-  }
-
-  .sm\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .sm\:underline {
@@ -2889,8 +2916,8 @@ video {
     width: 160px;
   }
 
-  .md\:w-\[728px\] {
-    width: 728px;
+  .md\:w-\[666px\] {
+    width: 666px;
   }
 
   .md\:w-\[738px\] {
@@ -2948,8 +2975,8 @@ video {
     height: 610px;
   }
 
-  .xl\:w-\[1100px\] {
-    width: 1100px;
+  .xl\:w-\[1054px\] {
+    width: 1054px;
   }
 
   .xl\:w-\[1170px\] {
@@ -3065,8 +3092,8 @@ video {
     width: 340px;
   }
 
-  .\32xl\:w-\[425px\] {
-    width: 425px;
+  .\32xl\:w-\[430px\] {
+    width: 430px;
   }
 
   .\32xl\:pt-\[85px\] {
