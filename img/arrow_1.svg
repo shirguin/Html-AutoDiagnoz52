@@ -1,0 +1,39 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width="50"
+  height="50"
+  fill="none"
+>
+  <defs>
+    <clipPath id="a">
+      <rect
+        width="49"
+        height="49"
+        fill="#fff"
+        fill-opacity="0"
+        rx="24.5"
+        transform="translate(.5 .5)"
+      />
+    </clipPath>
+  </defs>
+  <rect
+    width="49"
+    height="49"
+    fill="#B91C23"
+    rx="24.5"
+    transform="translate(.5 .5)"
+  />
+  <g clip-path="url(#a)">
+    <path
+      fill="#FFF"
+      fill-rule="evenodd"
+      d="m31.48 18.71-5.55-.66a.982.982 0 0 1-.87-1.11c.06-.55.55-.94 1.11-.87l7.94.93a1 1 0 0 1 .88 1.11l-.94 7.95c-.06.55-.55.94-1.11.87a.982.982 0 0 1-.87-1.11l.65-5.54-17.11 13.5-1.23-1.57 17.1-13.5Z"
+    />
+  </g>
+  <rect
+    width="49"
+    height="49"
+    rx="24.5"
+    transform="translate(.5 .5)"
+  />
+</svg>
