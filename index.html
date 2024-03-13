@@ -350,7 +350,8 @@
               </a>
 
               <!-- Иконка гамбургер меню -->
-              <button onclick="Open()" class="cursor-pointer xl:hidden">
+              <!-- <button onclick="Open()" class="cursor-pointer xl:hidden"> -->
+              <button class="cursor-pointer xl:hidden" id="openHam">
                 <svg
                   class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
                   xmlns="http://www.w3.org/2000/svg"
@@ -610,7 +611,9 @@
               class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden"
               id="modal_1"
             >
-              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack z-20">
+              <div
+                class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack z-20"
+              >
                 <div class="flex justify-end">
                   <svg
                     onclick="closeModal(modal_1)"
@@ -1043,8 +1046,6 @@
               </button>
             </div>
           </div>
-
-
         </section>
 
         <!-- Шрифты -->
@@ -1070,7 +1071,12 @@
 
     <script>
       // Гамбургер меню
+      let openHamEl = document.getElementById("openHam");
+
       let ham = document.getElementById("hamburger_menu");
+      openHamEl.addEventListener("click", function () {
+        Open();
+      });
 
       function Open() {
         ham.classList.add("left-0");
