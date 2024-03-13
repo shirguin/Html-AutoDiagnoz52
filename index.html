@@ -351,7 +351,11 @@
 
               <!-- Иконка гамбургер меню -->
               <!-- <button onclick="Open()" class="cursor-pointer xl:hidden"> -->
-              <button class="cursor-pointer xl:hidden" id="openHam">
+              <button
+                onclick="Open()"
+                class="cursor-pointer xl:hidden"
+                id="openHam"
+              >
                 <svg
                   class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
                   xmlns="http://www.w3.org/2000/svg"
@@ -600,7 +604,7 @@
 
               <button
                 onclick="showModal(modal_1)"
-                class="cursor-pointer animate-pulse_1"
+                class="cursor-pointer animate-pulse_1 z-0"
               >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
@@ -608,12 +612,10 @@
 
             <!-- Модальное окно - Кузов -->
             <div
-              class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden"
+              class="fixed inset-0 items-center justify-center bg-mainBlack bg-opacity-50 transition-opacity flex hidden z-50"
               id="modal_1"
             >
-              <div
-                class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack z-20"
-              >
+              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
                 <div class="flex justify-end">
                   <svg
                     onclick="closeModal(modal_1)"
@@ -793,7 +795,7 @@
 
               <button
                 onclick="showModal(modal_2)"
-                class="cursor-pointer animate-pulse_1"
+                class="cursor-pointer animate-pulse_1 z-0"
               >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
@@ -801,7 +803,7 @@
 
             <!-- Модальное окно - Двигатель -->
             <div
-              class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden"
+              class="fixed inset-0 items-center bg-mainBlack bg-opacity-50 transition-opacity justify-center flex hidden z-50"
               id="modal_2"
             >
               <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
@@ -982,9 +984,185 @@
                 Коробка
               </p>
 
-              <button class="cursor-pointer animate-pulse_1">
+              <button
+                onclick="showModal(modal_3)"
+                class="cursor-pointer animate-pulse_1 z-0"
+              >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
+            </div>
+
+            <!-- Модальное окно - Коробка -->
+            <div
+              class="fixed inset-0 items-center bg-mainBlack bg-opacity-50 transition-opacity justify-center flex hidden z-50"
+              id="modal_3"
+            >
+              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
+                <div class="flex justify-end">
+                  <svg
+                    onclick="closeModal(modal_3)"
+                    class="mt-3 mr-3 group"
+                    width="60.000000"
+                    height="60.000000"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs>
+                      <clipPath id="clip18_738">
+                        <rect
+                          id="Frame 469"
+                          rx="20.500000"
+                          width="41.000000"
+                          height="41.000000"
+                          transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                          fill="white"
+                          fill-opacity="0"
+                        />
+                      </clipPath>
+                    </defs>
+                    <rect
+                      class="group-hover:fill-mainWhite hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      fill="#B91C23"
+                      fill-opacity="1.000000"
+                    />
+                    <g clip-path="url(#clip18_738)">
+                      <path
+                        class="group-hover:fill-mainRed hover:transition-color duration-300"
+                        id="+"
+                        d="M38.1 36.92L37.32 37.75L30.23 31.09L23.57 38.19L22.74 37.41L29.4 30.31L22.3 23.66L23.08 22.83L30.17 29.49L36.83 22.39L37.66 23.17L31 30.26L38.1 36.92Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <rect
+                      class="group-hover:stroke-mainRed hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      stroke="#FFFFFF"
+                      stroke-opacity="0"
+                      stroke-width="1.000000"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-[10px]">
+                  <h3
+                    class="pl-5 mb-5 font-inter text-[20px] font-semibold leading-[24px] text-mainWhite"
+                  >
+                    Проверка КПП
+                  </h3>
+
+                  <div
+                    class="ml-5 mt-5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Проверка КПП
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Течи масла
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Остаток сцепления
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Подушки КПП
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Наличие ремонтов и их качество
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Компьютерная диагностика
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Давление масла
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Качество переключения передач
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Наличие и качество масла
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Подвеска -->
@@ -997,9 +1175,185 @@
                 Подвеска
               </p>
 
-              <button class="cursor-pointer animate-pulse_1">
+              <button
+                onclick="showModal(modal_4)"
+                class="cursor-pointer animate-pulse_1 z-0"
+              >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
+            </div>
+
+            <!-- Модальное окно - Подвеска -->
+            <div
+              class="fixed inset-0 items-center bg-mainBlack bg-opacity-50 transition-opacity justify-center flex hidden z-50"
+              id="modal_4"
+            >
+              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
+                <div class="flex justify-end">
+                  <svg
+                    onclick="closeModal(modal_4)"
+                    class="mt-3 mr-3 group"
+                    width="60.000000"
+                    height="60.000000"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs>
+                      <clipPath id="clip18_738">
+                        <rect
+                          id="Frame 469"
+                          rx="20.500000"
+                          width="41.000000"
+                          height="41.000000"
+                          transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                          fill="white"
+                          fill-opacity="0"
+                        />
+                      </clipPath>
+                    </defs>
+                    <rect
+                      class="group-hover:fill-mainWhite hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      fill="#B91C23"
+                      fill-opacity="1.000000"
+                    />
+                    <g clip-path="url(#clip18_738)">
+                      <path
+                        class="group-hover:fill-mainRed hover:transition-color duration-300"
+                        id="+"
+                        d="M38.1 36.92L37.32 37.75L30.23 31.09L23.57 38.19L22.74 37.41L29.4 30.31L22.3 23.66L23.08 22.83L30.17 29.49L36.83 22.39L37.66 23.17L31 30.26L38.1 36.92Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <rect
+                      class="group-hover:stroke-mainRed hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      stroke="#FFFFFF"
+                      stroke-opacity="0"
+                      stroke-width="1.000000"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-[10px]">
+                  <h3
+                    class="pl-5 mb-5 font-inter text-[20px] font-semibold leading-[24px] text-mainWhite"
+                  >
+                    Проверка подвески
+                  </h3>
+
+                  <div
+                    class="ml-5 mt-5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Состояние рычагов
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Стойки амортизаторов
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Рулевая рейка
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Система ABS и ESP
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Качество работы пневмоподвески
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Тест-драйв
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Осмотр на СТО
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Состояние сайлентблоков
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Ступичные подшипники
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Диагностика -->
@@ -1012,9 +1366,185 @@
                 Компьютерная диагностика
               </p>
 
-              <button class="cursor-pointer animate-pulse_1">
+              <button
+                onclick="showModal(modal_5)"
+                class="cursor-pointer animate-pulse_1 z-0"
+              >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
+            </div>
+
+            <!-- Модальное окно - Диагностика -->
+            <div
+              class="fixed inset-0 items-center bg-mainBlack bg-opacity-50 transition-opacity justify-center flex hidden z-50"
+              id="modal_5"
+            >
+              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
+                <div class="flex justify-end">
+                  <svg
+                    onclick="closeModal(modal_5)"
+                    class="mt-3 mr-3 group"
+                    width="60.000000"
+                    height="60.000000"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs>
+                      <clipPath id="clip18_738">
+                        <rect
+                          id="Frame 469"
+                          rx="20.500000"
+                          width="41.000000"
+                          height="41.000000"
+                          transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                          fill="white"
+                          fill-opacity="0"
+                        />
+                      </clipPath>
+                    </defs>
+                    <rect
+                      class="group-hover:fill-mainWhite hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      fill="#B91C23"
+                      fill-opacity="1.000000"
+                    />
+                    <g clip-path="url(#clip18_738)">
+                      <path
+                        class="group-hover:fill-mainRed hover:transition-color duration-300"
+                        id="+"
+                        d="M38.1 36.92L37.32 37.75L30.23 31.09L23.57 38.19L22.74 37.41L29.4 30.31L22.3 23.66L23.08 22.83L30.17 29.49L36.83 22.39L37.66 23.17L31 30.26L38.1 36.92Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <rect
+                      class="group-hover:stroke-mainRed hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      stroke="#FFFFFF"
+                      stroke-opacity="0"
+                      stroke-width="1.000000"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-[10px]">
+                  <h3
+                    class="pl-5 mb-5 font-inter text-[20px] font-semibold leading-[24px] text-mainWhite"
+                  >
+                    Компьютерная диагностика
+                  </h3>
+
+                  <div
+                    class="ml-5 mt-5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Работоспособность подушек безопасности
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Межсервисные интервалы
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Параметры работы
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Реальность пробега
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Соответствие блоков управления по VIN
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Актуальность ПО
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Электрика и электроника
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Ошибки ДВС, КПП, ЭБУ,ABS, ESP, ASR
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Натяжение цепи ГРМ
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Салон -->
@@ -1027,9 +1557,183 @@
                 Салон
               </p>
 
-              <button class="cursor-pointer animate-pulse_1">
+              <button
+                onclick="showModal(modal_6)"
+                class="cursor-pointer animate-pulse_1 z-0"
+              >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
+            </div>
+
+            <!-- Модальное окно - Салон -->
+            <div
+              class="fixed inset-0 items-center bg-mainBlack bg-opacity-50 transition-opacity justify-center flex hidden z-50"
+              id="modal_6"
+            >
+              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
+                <div class="flex justify-end">
+                  <svg
+                    onclick="closeModal(modal_6)"
+                    class="mt-3 mr-3 group"
+                    width="60.000000"
+                    height="60.000000"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs>
+                      <clipPath id="clip18_738">
+                        <rect
+                          id="Frame 469"
+                          rx="20.500000"
+                          width="41.000000"
+                          height="41.000000"
+                          transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                          fill="white"
+                          fill-opacity="0"
+                        />
+                      </clipPath>
+                    </defs>
+                    <rect
+                      class="group-hover:fill-mainWhite hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      fill="#B91C23"
+                      fill-opacity="1.000000"
+                    />
+                    <g clip-path="url(#clip18_738)">
+                      <path
+                        class="group-hover:fill-mainRed hover:transition-color duration-300"
+                        id="+"
+                        d="M38.1 36.92L37.32 37.75L30.23 31.09L23.57 38.19L22.74 37.41L29.4 30.31L22.3 23.66L23.08 22.83L30.17 29.49L36.83 22.39L37.66 23.17L31 30.26L38.1 36.92Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <rect
+                      class="group-hover:stroke-mainRed hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      stroke="#FFFFFF"
+                      stroke-opacity="0"
+                      stroke-width="1.000000"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-[10px]">
+                  <h3
+                    class="pl-5 mb-5 font-inter text-[20px] font-semibold leading-[24px] text-mainWhite"
+                  >
+                    Состояние салона
+                  </h3>
+
+                  <div
+                    class="ml-5 mt-5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Обивка сидений
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Пластиковые накладки
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Дверные карты
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Ремни безопасности
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Подушки безопасности
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Работоспособность электроники
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Состояние ковролина
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Торпеда
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    ></p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+                </div>
+              </div>
             </div>
 
             <!-- Документы -->
@@ -1041,15 +1745,191 @@
               >
                 Документы
               </p>
-              <button class="cursor-pointer animate-pulse_1">
+              <button
+                onclick="showModal(modal_7)"
+                class="cursor-pointer animate-pulse_1 z-0"
+              >
                 <img class="pr-10" src="./img/arrow_1.svg" alt="Arrow icon" />
               </button>
+            </div>
+
+            <!-- Модальное окно - Документы -->
+            <div
+              class="fixed inset-0 items-center bg-mainBlack bg-opacity-50 transition-opacity justify-center flex hidden z-50"
+              id="modal_7"
+            >
+              <div class="w-[340px] h-[470px] rounded-[25px] bg-secondBlack">
+                <div class="flex justify-end">
+                  <svg
+                    onclick="closeModal(modal_7)"
+                    class="mt-3 mr-3 group"
+                    width="60.000000"
+                    height="60.000000"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                  >
+                    <defs>
+                      <clipPath id="clip18_738">
+                        <rect
+                          id="Frame 469"
+                          rx="20.500000"
+                          width="41.000000"
+                          height="41.000000"
+                          transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                          fill="white"
+                          fill-opacity="0"
+                        />
+                      </clipPath>
+                    </defs>
+                    <rect
+                      class="group-hover:fill-mainWhite hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      fill="#B91C23"
+                      fill-opacity="1.000000"
+                    />
+                    <g clip-path="url(#clip18_738)">
+                      <path
+                        class="group-hover:fill-mainRed hover:transition-color duration-300"
+                        id="+"
+                        d="M38.1 36.92L37.32 37.75L30.23 31.09L23.57 38.19L22.74 37.41L29.4 30.31L22.3 23.66L23.08 22.83L30.17 29.49L36.83 22.39L37.66 23.17L31 30.26L38.1 36.92Z"
+                        fill="#FFFFFF"
+                        fill-opacity="1.000000"
+                        fill-rule="evenodd"
+                      />
+                    </g>
+                    <rect
+                      class="group-hover:stroke-mainRed hover:transition-color duration-300"
+                      id="Frame 469"
+                      rx="20.500000"
+                      width="41.000000"
+                      height="41.000000"
+                      transform="translate(0.500000 31.136047) rotate(-46.838619)"
+                      stroke="#FFFFFF"
+                      stroke-opacity="0"
+                      stroke-width="1.000000"
+                    />
+                  </svg>
+                </div>
+
+                <div class="mt-[10px]">
+                  <h3
+                    class="pl-5 mb-5 font-inter text-[20px] font-semibold leading-[24px] text-mainWhite"
+                  >
+                    Документы
+                  </h3>
+
+                  <div
+                    class="ml-5 mt-5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Подлиность документов
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Запреты
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Аресты
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Розыск
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Криминал
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Кредиты
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Работа в такси
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Нотариальная палата
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+
+                  <div
+                    class="ml-5 mt-2.5 flex items-center justify-between w-[300px] border-b border-secondGray"
+                  >
+                    <p
+                      class="font-inter text-[12px] font-semibold leading-[17px] text-mainWhite"
+                    >
+                      Отзывные компании
+                    </p>
+                    <img src="./img/check-box.svg" alt="check-box icon" />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
         <!-- Шрифты -->
-        <section class="w-full mt-[200px]">
+        <section class="w-full mt-[200px] pl-2.5">
           <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
             Принимая во внимание
           </h1>
