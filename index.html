@@ -350,12 +350,7 @@
               </a>
 
               <!-- Иконка гамбургер меню -->
-              <!-- <button onclick="Open()" class="cursor-pointer xl:hidden"> -->
-              <button
-                onclick="Open()"
-                class="cursor-pointer xl:hidden"
-                id="openHam"
-              >
+              <button onclick="Open()" class="cursor-pointer xl:hidden">
                 <svg
                   class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
                   xmlns="http://www.w3.org/2000/svg"
@@ -604,10 +599,20 @@
         </section>
 
         <!-- Второй, третий блок -->
-        <section class="flex flex-col items-center mobile:w-full">
+
+        <!-- Разобраться как в tailwind сделать это!!! -->
+        <!-- background: linear-gradient(90deg, #000000,#e3e8e4,#030303);  
+              bg-gradient-to-b from-mainBlack via-mainGray to-blue-950  -->
+
+        <!-- bg-gradient-to-b from-mainBlack to-mainGray -->
+
+        <section
+          class="flex flex-col items-center mobile:w-full"
+          style="background: linear-gradient(180deg, #000000, #6c6c6c, #000000)"
+        >
           <!-- Второй блок -->
           <div
-            class="px-2.5 flex flex-col items-center mobile:w-full md:w-[768px] xl:w-[1170px] 2xl:w-[1575px] mt-[40px] sm:mt-[88px] md:mt-[96px] xl:mt-[83px] 2xl:mt-[106px] bg-gradient-to-b from-mainBlack to-mainGray pb-10"
+            class="px-2.5 flex flex-col items-center mobile:w-full md:w-[768px] xl:w-[1170px] 2xl:w-[1575px] mt-[40px] sm:mt-[88px] md:mt-[96px] xl:mt-[83px] 2xl:mt-[106px]"
           >
             <!-- Заголовок -->
             <div class="flex justify-start mobile:w-full">
@@ -624,26 +629,23 @@
             >
               <div class="flex flex-col">
                 <!-- Кузов -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_1)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Кузов
-                  </p>
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                    >
+                      Кузов
+                    </p>
 
-                  <button
-                    onclick="showModal(modal_1)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Кузов -->
                 <div
@@ -821,26 +823,23 @@
                 </div>
 
                 <!-- Двигатель -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_2)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Двигатель
-                  </p>
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                    >
+                      Двигатель
+                    </p>
 
-                  <button
-                    onclick="showModal(modal_2)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Двигатель -->
                 <div
@@ -1020,26 +1019,23 @@
 
               <div class="flex flex-col">
                 <!-- Коробка -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_3)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Коробка
-                  </p>
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                    >
+                      Коробка
+                    </p>
 
-                  <button
-                    onclick="showModal(modal_3)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Коробка -->
                 <div
@@ -1217,26 +1213,23 @@
                 </div>
 
                 <!-- Подвеска -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_4)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Подвеска
-                  </p>
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                    >
+                      Подвеска
+                    </p>
 
-                  <button
-                    onclick="showModal(modal_4)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Подвеска -->
                 <div
@@ -1416,26 +1409,23 @@
 
               <div class="flex flex-col">
                 <!-- Диагностика -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite w-[140px] pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_5)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Компьютерная диагностика
-                  </p>
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite w-[140px] pl-10 xl:pt-[225px]"
+                    >
+                      Компьютерная диагностика
+                    </p>
 
-                  <button
-                    onclick="showModal(modal_5)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Диагностика -->
                 <div
@@ -1613,26 +1603,23 @@
                 </div>
 
                 <!-- Салон -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_6)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Салон
-                  </p>
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                    >
+                      Салон
+                    </p>
 
-                  <button
-                    onclick="showModal(modal_6)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Салон -->
                 <div
@@ -1810,25 +1797,23 @@
 
               <div class="flex flex-col">
                 <!-- Документы -->
-                <div
-                  class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
-                >
-                  <p
-                    class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                <button onclick="showModal(modal_7)" class="cursor-pointer">
+                  <div
+                    class="flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                   >
-                    Документы
-                  </p>
-                  <button
-                    onclick="showModal(modal_7)"
-                    class="cursor-pointer animate-pulse_1 z-0"
-                  >
+                    <p
+                      class="font-inter text-[18px] leading-[22px] font-normal text-mainWhite pl-10 xl:pt-[225px]"
+                    >
+                      Документы
+                    </p>
+
                     <img
-                      class="pr-10 xl:pt-[32px] xl:pr-[32px]"
+                      class="pr-10 xl:pt-[32px] xl:pr-[32px] animate-pulse_1 z-0"
                       src="./img/arrow_1.svg"
                       alt="Arrow icon"
                     />
-                  </button>
-                </div>
+                  </div>
+                </button>
 
                 <!-- Модальное окно - Документы -->
                 <div
@@ -2013,11 +1998,69 @@
             <!-- Заголовок -->
             <div class="flex justify-start mobile:w-full">
               <h2
-                class="font-inter text-[28px] sm:text-[35px] md:text-[40px] xl:text-[50px] font-bold leading-[40px] xl:leading-[50px] uppercase text-mainWhite mt-10 w-full"
+                class="font-inter text-[28px] sm:text-[35px] md:text-[40px] xl:text-[50px] font-bold leading-[40px] xl:leading-[50px] uppercase text-mainWhite mt-[120px] sm:mt-[110px] md:mt-[170px] xl:mt-[135px] 2xl:mt-[185px] w-full"
               >
                 Услуги по автоподбору
               </h2>
             </div>
+
+            <!-- Услуга 1 -->
+            <div
+              class="flex flex-col items-center mt-[75px] bg-gradient-to-b from-mainBlack to-mainGray border border-mainGray rounded-[25px] shadow-black w-full h-[625px] mobile:h-[667px]"
+            >
+              <img
+                class="w-[280px] mobile:w-[330px] mt-[45px] mobile:mt-[65px]"
+                src="./img/foto_1.png"
+                alt="foto auto"
+              />
+
+              <!-- Контекст -->
+              <div
+                class="flex flex-col w-min-[300px] mobile:w-[330px] items-left mt-[28px] mobile:mt-6"
+              >
+                <h3
+                  class="font-inter text-[22px] font-semibold leading-[27px] text-mainWhite"
+                >
+                  Проверка одного автомобиля
+                </h3>
+
+                <p
+                  class="font-inter text-[15px] font-normal leading-[18px] text-mainWhite mt-[5px] mobile:mt-[21px]"
+                >
+                  Проверка автомобиля который&nbsp;Вы уже выбрали и&nbsp;перед
+                  покупкой хотите быть уверены, что машина исправна
+                  и&nbsp;юридически чиста
+                </p>
+
+                <p
+                  class="font-inter text-[25px] font-normal leading-[30px] text-mainWhite mt-5"
+                >
+                  <b>от 5000 </b>руб
+                </p>
+
+                <button
+                  class="w-min-[300px] mobile:w-full h-[55px] rounded-[10px] bg-mainRed hover:bg-mainWhite hover:transition-color duration-300 font-inter text-[16px] font-normal leading-[19px] text-mainWhite hover:text-mainRed mt-[30px]"
+                >
+                  Заказать
+                </button>
+
+                <button
+                  class="w-min-[300px] mobile:w-full h-[55px] border box-border rounded-[10px] bg-mainGray hover:bg-mainWhite hover:transition-color duration-300 font-inter text-[16px] font-normal leading-[19px] text-mainWhite hover:text-mainBlack mt-[10px]"
+                >
+                  Подробнее
+                </button>
+              </div>
+            </div>
+
+            <!-- Услуга 2 -->
+            <div
+              class="flex flex-col items-center mt-[25px] bg-gradient-to-b from-mainBlack to-mainGray border rounded-[25px] shadow-mainGray w-full h-[500px]"
+            ></div>
+
+            <!-- Услуга 3 -->
+            <div
+              class="flex flex-col items-center mt-[25px] bg-gradient-to-b from-mainBlack to-mainGray border rounded-[25px] shadow-mainGray w-full h-[500px]"
+            ></div>
           </div>
         </section>
 
@@ -2044,12 +2087,12 @@
 
     <script>
       // Гамбургер меню
-      let openHamEl = document.getElementById("openHam");
+      // let openHamEl = document.getElementById("openHam");
 
       let ham = document.getElementById("hamburger_menu");
-      openHamEl.addEventListener("click", function () {
-        Open();
-      });
+      // openHamEl.addEventListener("click", function () {
+      //   Open();
+      // });
 
       function Open() {
         ham.classList.add("left-0");
