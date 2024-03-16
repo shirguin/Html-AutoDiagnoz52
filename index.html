@@ -2,7 +2,11 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" maximum-scale="1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+      maximum-scale="1"
+    />
     <title>Главная</title>
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
@@ -242,9 +246,12 @@
               </a>
 
               <!-- Иконка гамбургер меню -->
-              <button 
-                onclick="Open()"
-                class="cursor-pointer xl:hidden" type="button">
+              <button
+                onclick="Open(event)"
+                ontouchstart="OpenTablet(event)"
+                class="cursor-pointer xl:hidden"
+                type="button"
+              >
                 <svg
                   class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2509,6 +2516,16 @@
 
         <!-- Шрифты -->
         <section class="w-full mt-[200px] pl-2.5">
+          <button
+            id="test_button"
+            onclick="OpenNote(event)"
+            ontouchstart="OpenNote(event)"
+            class="text-black bg-gray-400 px-4 py-2"
+          >
+            Нажми меня
+          </button>
+          <h3 id="test_text" class="text-mainWhite"></h3>
+
           <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
             Принимая во внимание
           </h1>
@@ -2525,22 +2542,8 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 4
+            Тест кнопок - 5
           </h1>
-
-          <button
-          id="test_button"
-          onclick="OpenNote(event)"
-          ontouchstart="OpenNote(event)"
-          class="text-mainRed bg-gray-400 px-4 py-2"
-          >
-            Нажми меня
-          </button>
-          <h3
-          id="test_text"
-          class="text-mainWhite"
-          ></h3>
-
         </section>
       </main>
     </div>
@@ -2555,18 +2558,23 @@
       //   Open();
       // });
 
-      function Open() {
+      function Open(event) {
         ham.classList.add("left-0");
       }
 
-      function Close() {
+      function OpenTablet(event) {
+        ham.classList.add("left-0");
+      }
+
+      function Close(event) {
         ham.classList.remove("left-0");
       }
 
-      
       function OpenNote(event) {
+
         let text = document.getElementById("test_text");
-        text.innerText=event.target;
+   
+        text.innerText = `Меня нажали событие ${event.type}` ;
       }
       // Модальные окна
       function showModal(modal) {
