@@ -242,7 +242,10 @@
               </a>
 
               <!-- Иконка гамбургер меню -->
-              <button id="openHam" onclick="Open()" class="cursor-pointer xl:hidden" type="button">
+              <button 
+                onclick="Open()"
+                ontouchstart="Open()"
+                class="cursor-pointer xl:hidden" type="button">
                 <svg
                   class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
                   xmlns="http://www.w3.org/2000/svg"
@@ -2523,7 +2526,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 2
+            Тест кнопок - 3
           </h1>
         </section>
       </main>
@@ -2532,12 +2535,12 @@
     <script>
       // Гамбургер меню
       // let openHamEl = document.getElementById("openHam");
-      let openHamEl = document.getElementById("openHam");
+      // let openHamEl = document.getElementById("openHam");
       let ham = document.getElementById("hamburger_menu");
 
-      openHamEl.addEventListener("touchstart", function () {
-        Open();
-      });
+      // openHamEl.addEventListener("touchstart", function () {
+      //   Open();
+      // });
 
       function Open() {
         ham.classList.add("left-0");
