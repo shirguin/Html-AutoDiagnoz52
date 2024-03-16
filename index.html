@@ -526,8 +526,8 @@
               <div class="flex flex-col">
                 <!-- Кузов -->
                 <div
-                onclick="showModal('modal_1')"
-                  ontouchstart="showModal('modal_1')"
+                onclick="showModal(modal_1)"
+                  ontouchstart="showModalTablet(event,'modal_1')"
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -2544,7 +2544,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 8
+            Тест кнопок - 9
           </h1>
         </section>
       </main>
@@ -2560,21 +2560,22 @@
       //   Open();
       // });
 
+      let ham = document.getElementById("hamburger_menu");
+
       function Open(event) {
-        let ham = document.getElementById("hamburger_menu");
         ham.classList.add("left-0");
       }
 
-      function OpenTablet(event) {
-        let ham = document.getElementById("hamburger_menu");
-        ham.classList.add("left-0");
-      }
+      // function OpenTablet(event) {
+      //   ham.classList.add("left-0");
+      // }
 
       function Close(event) {
-        let ham = document.getElementById("hamburger_menu");
         ham.classList.remove("left-0");
       }
 
+
+// Тестовая кнопка
       function OpenNote(event) {
 
         let text = document.getElementById("test_text");
@@ -2586,6 +2587,12 @@
       }
       // Модальные окна
       function showModal(modal) {
+        // const el = document.getElementById(modal);
+        // el.classList.remove("hidden");
+        modal.classList.remove("hidden");
+      }
+
+      function showModalTablet(event, modal) {
         const el = document.getElementById(modal);
         el.classList.remove("hidden");
       }
