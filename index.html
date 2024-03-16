@@ -2525,6 +2525,7 @@
             Нажми меня
           </button>
           <h3 id="test_text" class="text-mainWhite"></h3>
+          <h3 id="test_text_1" class="text-mainWhite hidden">TEST1</h3>
 
           <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
             Принимая во внимание
@@ -2542,7 +2543,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 6
+            Тест кнопок - 7
           </h1>
         </section>
       </main>
@@ -2576,8 +2577,11 @@
       function OpenNote(event) {
 
         let text = document.getElementById("test_text");
+        let text_1 = document.getElementById("test_text_1");
    
-        text.innerText = `Меня нажали событие ${event.type}` ;
+        text.innerText = `Меня нажали событие ${event.type}`;
+        text_1.classList.remove("hidden");
+        text_1.classList.add("bg-green-500");
       }
       // Модальные окна
       function showModal(modal) {
