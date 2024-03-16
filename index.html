@@ -244,7 +244,6 @@
               <!-- Иконка гамбургер меню -->
               <button 
                 onclick="Open()"
-                ontouchstart="Open()"
                 class="cursor-pointer xl:hidden" type="button">
                 <svg
                   class="hover:stroke-mainRed hover:transition-color duration-300 w-10 h-10 text-mainWhite"
@@ -2526,8 +2525,22 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 3
+            Тест кнопок - 4
           </h1>
+
+          <button
+          id="test_button"
+          onclick="OpenNote(event)"
+          ontouchstart="OpenNote(event)"
+          class="text-mainRed bg-gray-400 px-4 py-2"
+          >
+            Нажми меня
+          </button>
+          <h3
+          id="test_text"
+          class="text-mainWhite"
+          ></h3>
+
         </section>
       </main>
     </div>
@@ -2550,6 +2563,11 @@
         ham.classList.remove("left-0");
       }
 
+      
+      function OpenNote(event) {
+        let text = document.getElementById("test_text");
+        text.innerText=event.target;
+      }
       // Модальные окна
       function showModal(modal) {
         modal.classList.remove("hidden");
