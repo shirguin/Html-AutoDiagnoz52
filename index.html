@@ -526,7 +526,8 @@
               <div class="flex flex-col">
                 <!-- Кузов -->
                 <div
-                  onclick="showModal(modal_1)"
+                onclick="showModal('modal_1')"
+                  ontouchstart="showModal('modal_1')"
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -2543,7 +2544,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 7
+            Тест кнопок - 8
           </h1>
         </section>
       </main>
@@ -2585,7 +2586,8 @@
       }
       // Модальные окна
       function showModal(modal) {
-        modal.classList.remove("hidden");
+        const el = document.getElementById(modal);
+        el.classList.remove("hidden");
       }
 
       function closeModal(modal) {
