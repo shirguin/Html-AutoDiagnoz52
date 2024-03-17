@@ -2361,7 +2361,7 @@
 
               <!-- Модальное окно - Услуги 3 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                class="fixed inset-0 flex items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center invisible z-50"
                 id="modal_13"
               >
                 <div
@@ -2519,7 +2519,7 @@
 
         <div>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 17
+            Тест кнопок - 18
           </h1>
           <h3 id="error_1" class="text-mainWhite"></h3>
           <h3 id="error_2" class="text-mainWhite"></h3>
@@ -2641,13 +2641,13 @@
         error_2.innerText = classList;
         console.log(classList);
 
-        modal.classList.remove("hidden");
-        error_3.innerText = "Удалил hidden";
+        modal.classList.remove("invisible");
+        error_3.innerText = "Удалил invisible";
         let classList_1 = modal.className;
         error_4.innerText = classList_1;
 
-        modal.classList.add("flex");
-        error_5.innerText = "Удалил hidden";
+        modal.classList.add("visible");
+        error_5.innerText = "Добавил visible";
         let classList_2 = modal.className;
         error_6.innerText = classList_2;
 
@@ -2670,8 +2670,8 @@
       }
 
       function closeModal_2(modal) {
-        modal.classList.remove("flex");
-        modal.classList.add("hidden");
+        modal.classList.remove("visible");
+        modal.classList.add("invisible");
       }
     </script>
   </body>
