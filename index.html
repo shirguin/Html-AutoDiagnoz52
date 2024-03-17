@@ -529,7 +529,6 @@
                 <div
                   id="test"
                   onclick="showModal_1(this)"
-
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -2520,13 +2519,15 @@
 
         <div>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 16
+            Тест кнопок - 17
           </h1>
           <h3 id="error_1" class="text-mainWhite"></h3>
           <h3 id="error_2" class="text-mainWhite"></h3>
           <h3 id="error_3" class="text-mainWhite"></h3>
           <h3 id="error_4" class="text-mainWhite"></h3>
           <h3 id="error_5" class="text-mainWhite"></h3>
+          <h3 id="error_6" class="text-mainWhite"></h3>
+          <h3 id="error_7" class="text-mainWhite"></h3>
         </div>
 
         <!-- Шрифты -->
@@ -2539,7 +2540,7 @@
           >
             Нажми меня
           </button>
-          <br /><br>
+          <br /><br />
           <div
             onclick="OpenNote(this)"
             ontouchstart="OpenNote(this)"
@@ -2565,7 +2566,6 @@
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
             Принимая во внимание
           </h1> -->
-
         </section>
       </main>
     </div>
@@ -2610,7 +2610,7 @@
       }
 
       const testEl = document.getElementById("test");
-      testEl.addEventListener('touchstart',(event)=>{
+      testEl.addEventListener("touchstart", (event) => {
         event.preventDefault();
 
         let text = document.getElementById("test_text");
@@ -2632,12 +2632,26 @@
       const error_3 = document.getElementById("error_3");
       const error_4 = document.getElementById("error_4");
       const error_5 = document.getElementById("error_5");
-
+      const error_6 = document.getElementById("error_6");
+      const error_7 = document.getElementById("error_7");
 
       function showModal_2(modal) {
-        error_1.innerText="Клик сработал, вошел в функцию";
+        error_1.innerText = "Клик сработал, вошел в функцию";
+        let classList = modal.className;
+        error_2.innerText = classList;
+        console.log(classList);
+
         modal.classList.remove("hidden");
+        error_3.innerText = "Удалил hidden";
+        let classList_1 = modal.className;
+        error_4.innerText = classList_1;
+
         modal.classList.add("flex");
+        error_5.innerText = "Удалил hidden";
+        let classList_2 = modal.className;
+        error_6.innerText = classList_2;
+
+        error_7.innerText = "Конец функции";
       }
 
       function showModalTablet(event, modal) {
