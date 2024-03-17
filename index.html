@@ -525,9 +525,10 @@
             >
               <div class="flex flex-col">
                 <!-- Кузов -->
+                <!-- ontouchstart="showModalTablet(event,'modal_1')" -->
                 <div
-                onclick="showModal(modal_1)"
-                  ontouchstart="showModalTablet(event,'modal_1')"
+                  onClick="showModal_1(this)"
+                  
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -553,7 +554,7 @@
                   >
                     <div class="flex justify-end">
                       <svg
-                        onclick="closeModal(modal_1)"
+                        onclick="closeModal_1(this)"
                         class="group cursor-pointer mt-3 mr-3"
                         id="close_icon_1-1"
                         width="60.000000"
@@ -2544,7 +2545,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 9
+            Тест кнопок - 10
           </h1>
         </section>
       </main>
@@ -2552,23 +2553,11 @@
 
     <script>
       // Гамбургер меню
-      // let openHamEl = document.getElementById("openHam");
-      // let openHamEl = document.getElementById("openHam");
-
-
-      // openHamEl.addEventListener("touchstart", function () {
-      //   Open();
-      // });
-
       let ham = document.getElementById("hamburger_menu");
 
       function Open(event) {
         ham.classList.add("left-0");
       }
-
-      // function OpenTablet(event) {
-      //   ham.classList.add("left-0");
-      // }
 
       function Close(event) {
         ham.classList.remove("left-0");
@@ -2592,6 +2581,10 @@
         modal.classList.remove("hidden");
       }
 
+      function showModal_1(elem) {
+        elem.nextElementSibling.classList.remove("hidden");
+      }
+
       function showModalTablet(event, modal) {
         const el = document.getElementById(modal);
         el.classList.remove("hidden");
@@ -2599,6 +2592,11 @@
 
       function closeModal(modal) {
         modal.classList.add("hidden");
+      }
+
+      function closeModal_1(elem) {
+        const targetElem = elem.parentElement.parentElement.parentElement;
+        targetElem.classList.add("hidden");
       }
     </script>
   </body>
