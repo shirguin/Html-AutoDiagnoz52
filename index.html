@@ -147,7 +147,7 @@
             <div class="flex items-center gap-2">
               <!-- Телефон -->
               <div
-                class="flex items-center justify-between gap-2 mr-[18px] hidden md:flex"
+                class="items-center justify-between gap-2 mr-[18px] hidden md:flex"
               >
                 <!-- Иконка телефонной трубки -->
                 <svg
@@ -273,7 +273,7 @@
 
         <!-- Гамбургер меню -->
         <div
-          class="absolute top-0 left-[-1280px] transition-left duration-500 transition-slowest ease bg-[url('./img/background_car_blur.jpeg')] bg-no-repeat bg-center bg-left pt-2.5 pb-[62px] mobile:w-full sm:w-[490px] md:w-[748px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack xl:hidden"
+          class="absolute top-0 left-[-1280px] transition-left duration-500 transition-slowest ease bg-[url('./img/background_car_blur.jpeg')] bg-no-repeat bg-left pt-2.5 pb-[62px] mobile:w-full sm:w-[490px] md:w-[748px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack xl:hidden"
           id="hamburger_menu"
         >
           <!-- Кнопка закрывания меню -->
@@ -547,7 +547,7 @@
 
                 <!-- Модальное окно - Кузов -->
                 <div
-                  class="fixed inset-0 items-center justify-center bg-mainBlack bg-opacity-80 transition-opacity flex hidden z-50"
+                  class="fixed inset-0 items-center justify-center bg-mainBlack bg-opacity-80 transition-opacity hidden z-50"
                   id="modal_1"
                 >
                   <div
@@ -742,7 +742,7 @@
 
                 <!-- Модальное окно - Двигатель -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_2"
                 >
                   <div
@@ -938,7 +938,7 @@
 
                 <!-- Модальное окно - Коробка -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_3"
                 >
                   <div
@@ -1132,7 +1132,7 @@
 
                 <!-- Модальное окно - Подвеска -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_4"
                 >
                   <div
@@ -1327,7 +1327,7 @@
 
                 <!-- Модальное окно - Диагностика -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_5"
                 >
                   <div
@@ -1520,7 +1520,7 @@
 
                 <!-- Модальное окно - Салон -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_6"
                 >
                   <div
@@ -1713,7 +1713,7 @@
 
                 <!-- Модальное окно - Документы -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_7"
                 >
                   <div
@@ -1957,7 +1957,7 @@
 
               <!-- Модальное окно - Услуги 1 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_11"
               >
                 <div
@@ -2159,7 +2159,7 @@
 
               <!-- Модальное окно - Услуги 2 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_12"
               >
                 <div
@@ -2518,6 +2518,17 @@
           </div>
         </section>
 
+        <div>
+          <h1 class="font-inter text-[24px] text-mainWhite font-black">
+            Тест кнопок - 16
+          </h1>
+          <h3 id="error_1" class="text-mainWhite"></h3>
+          <h3 id="error_2" class="text-mainWhite"></h3>
+          <h3 id="error_3" class="text-mainWhite"></h3>
+          <h3 id="error_4" class="text-mainWhite"></h3>
+          <h3 id="error_5" class="text-mainWhite"></h3>
+        </div>
+
         <!-- Шрифты -->
         <section class="w-full mt-[200px] pl-2.5">
           <button
@@ -2539,7 +2550,7 @@
           <h3 id="test_text" class="text-mainWhite"></h3>
           <h3 id="test_text_1" class="text-mainWhite hidden">TEST1</h3>
 
-          <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
+          <!-- <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
             Принимая во внимание
           </h1>
           <h1 class="font-mono text-[24px] text-mainWhite font-regular">
@@ -2553,10 +2564,8 @@
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
             Принимая во внимание
-          </h1>
-          <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 15
-          </h1>
+          </h1> -->
+
         </section>
       </main>
     </div>
@@ -2597,6 +2606,7 @@
         // const el = document.getElementById(modal);
         // el.classList.remove("hidden");
         modal.classList.remove("hidden");
+        modal.classList.add("flex");
       }
 
       const testEl = document.getElementById("test");
@@ -2617,7 +2627,15 @@
         elem.nextElementSibling.classList.remove("hidden");
       }
 
+      const error_1 = document.getElementById("error_1");
+      const error_2 = document.getElementById("error_2");
+      const error_3 = document.getElementById("error_3");
+      const error_4 = document.getElementById("error_4");
+      const error_5 = document.getElementById("error_5");
+
+
       function showModal_2(modal) {
+        error_1.innerText="Клик сработал, вошел в функцию";
         modal.classList.remove("hidden");
         modal.classList.add("flex");
       }
@@ -2633,6 +2651,7 @@
 
       function closeModal_1(elem) {
         const targetElem = elem.parentElement.parentElement.parentElement;
+        targetElem.classList.remove("flex");
         targetElem.classList.add("hidden");
       }
 
