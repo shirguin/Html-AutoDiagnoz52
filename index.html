@@ -2555,7 +2555,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 13
+            Тест кнопок - 14
           </h1>
         </section>
       </main>
@@ -2602,6 +2602,14 @@
       const testEl = document.getElementById("test");
       testEl.addEventListener('touchstart',(event)=>{
         event.preventDefault();
+
+        let text = document.getElementById("test_text");
+        let text_1 = document.getElementById("test_text_1");
+
+        text.innerText = `Кнопка сработала`;
+        text_1.classList.remove("hidden");
+        text_1.classList.add("bg-blue-500");
+
         showModal_1(event.target);
       });
 
