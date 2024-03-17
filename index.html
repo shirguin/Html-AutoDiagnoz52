@@ -528,7 +528,7 @@
                 <!-- ontouchstart="showModalTablet(event,'modal_1')" -->
                 <div
                   onClick="showModal_1(this)"
-                  
+                  ontouchstart="showModal_1(this)"
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -555,6 +555,7 @@
                     <div class="flex justify-end">
                       <svg
                         onclick="closeModal_1(this)"
+                        ontouchstart="closeModal_1(this)"
                         class="group cursor-pointer mt-3 mr-3"
                         id="close_icon_1-1"
                         width="60.000000"
@@ -2520,8 +2521,8 @@
         <section class="w-full mt-[200px] pl-2.5">
           <button
             id="test_button"
-            onclick="OpenNote(event)"
-            ontouchstart="OpenNote(event)"
+            onclick="OpenNote(this)"
+            ontouchstart="OpenNote(this)"
             class="text-black bg-gray-400 px-4 py-2"
           >
             Нажми меня
@@ -2545,7 +2546,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 10
+            Тест кнопок - 11
           </h1>
         </section>
       </main>
@@ -2563,17 +2564,25 @@
         ham.classList.remove("left-0");
       }
 
+      // Тестовая кнопка
+      // function OpenNote(event) {
+      //   let text = document.getElementById("test_text");
+      //   let text_1 = document.getElementById("test_text_1");
 
-// Тестовая кнопка
-      function OpenNote(event) {
+      //   text.innerText = `Меня нажали событие ${event.type}`;
+      //   text_1.classList.remove("hidden");
+      //   text_1.classList.add("bg-green-500");
+      // }
 
+      function OpenNote(elem) {
         let text = document.getElementById("test_text");
         let text_1 = document.getElementById("test_text_1");
-   
-        text.innerText = `Меня нажали событие ${event.type}`;
+
+        text.innerText = `Меня нажали элемент: ${elem}`;
         text_1.classList.remove("hidden");
         text_1.classList.add("bg-green-500");
       }
+
       // Модальные окна
       function showModal(modal) {
         // const el = document.getElementById(modal);
