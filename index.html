@@ -525,10 +525,11 @@
             >
               <div class="flex flex-col">
                 <!-- Кузов -->
-                <!-- ontouchstart="showModalTablet(event,'modal_1')" -->
+                <!-- ontouchstart="showModal_1(this)" -->
                 <div
-                  onClick="showModal_1(this)"
-                  ontouchstart="showModal_1(this)"
+                  id="test"
+                  onclick="showModal_1(this)"
+
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -2527,6 +2528,14 @@
           >
             Нажми меня
           </button>
+          <br /><br>
+          <div
+            onclick="OpenNote(this)"
+            ontouchstart="OpenNote(this)"
+            class="w-[200px] h-[50px] text-black bg-gray-400 px-4 py-2"
+          >
+            Нажми меня
+          </div>
           <h3 id="test_text" class="text-mainWhite"></h3>
           <h3 id="test_text_1" class="text-mainWhite hidden">TEST1</h3>
 
@@ -2546,7 +2555,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 11
+            Тест кнопок - 13
           </h1>
         </section>
       </main>
@@ -2589,6 +2598,12 @@
         // el.classList.remove("hidden");
         modal.classList.remove("hidden");
       }
+
+      const testEl = document.getElementById("test");
+      testEl.addEventListener('touchstart',(event)=>{
+        event.preventDefault();
+        showModal_1(event.target);
+      });
 
       function showModal_1(elem) {
         elem.nextElementSibling.classList.remove("hidden");
