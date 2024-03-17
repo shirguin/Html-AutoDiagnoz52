@@ -2352,7 +2352,7 @@
                   </button>
 
                   <button
-                    onclick="showModal(modal_13)"
+                    onclick="showModal_2(modal_13)"
                     class="w-[298px] mobile:w-[358px] h-[55px] border rounded-[10px] bg-mainGray hover:bg-mainWhite hover:transition-color duration-300 font-inter text-[16px] font-normal leading-[19px] text-mainWhite hover:text-mainBlack mt-[10px] mb-[30px] mobile:mb-[45px]"
                   >
                     Подробнее
@@ -2362,7 +2362,7 @@
 
               <!-- Модальное окно - Услуги 3 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center flex hidden z-50"
+                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_13"
               >
                 <div
@@ -2370,7 +2370,7 @@
                 >
                   <div class="flex justify-end">
                     <svg
-                      onclick="closeModal(modal_13)"
+                      onclick="closeModal_2(modal_13)"
                       class="mt-3 mr-3 group"
                       width="60.000000"
                       height="60.000000"
@@ -2555,7 +2555,7 @@
             Принимая во внимание
           </h1>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 14
+            Тест кнопок - 15
           </h1>
         </section>
       </main>
@@ -2617,6 +2617,11 @@
         elem.nextElementSibling.classList.remove("hidden");
       }
 
+      function showModal_2(modal) {
+        modal.classList.remove("hidden");
+        modal.classList.add("flex");
+      }
+
       function showModalTablet(event, modal) {
         const el = document.getElementById(modal);
         el.classList.remove("hidden");
@@ -2629,6 +2634,11 @@
       function closeModal_1(elem) {
         const targetElem = elem.parentElement.parentElement.parentElement;
         targetElem.classList.add("hidden");
+      }
+
+      function closeModal_2(modal) {
+        modal.classList.remove("flex");
+        modal.classList.add("hidden");
       }
     </script>
   </body>
