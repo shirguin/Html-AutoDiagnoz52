@@ -34,7 +34,6 @@
 
   <body class="flex flex-col items-center bg-mainBlack">
     <div class="flex flex-col items-center mobile:w-full sm:w-[470px]">
-      <!-- relative -->
       <header
         class="px-2.5 relative flex flex-col pt-2.5 mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
       >
@@ -273,7 +272,6 @@
         </div>
 
         <!-- Гамбургер меню -->
-        <!-- absolute -->
         <div
           class="absolute top-0 left-[-1280px] transition-left duration-500 transition-slowest ease bg-[url('./img/background_car_blur.jpeg')] bg-no-repeat bg-left pt-2.5 pb-[62px] mobile:w-full sm:w-[490px] md:w-[748px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack xl:hidden"
           id="hamburger_menu"
@@ -2540,18 +2538,17 @@
       </main>
     </div>
 
-    <h3 class="text-mainWhite">Тест меню - 2</h3>
 
     <script>
       // Гамбургер меню
       let ham = document.getElementById("hamburger_menu");
 
       function Open(event) {
-        ham.classList.add("left-[-1px]");
+        ham.classList.add("left-[1px]");
       }
 
       function Close(event) {
-        ham.classList.remove("left-[-1px]");
+        ham.classList.remove("left-[1px]");
       }
 
       // Модальные окна
