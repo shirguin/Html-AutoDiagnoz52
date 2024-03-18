@@ -34,6 +34,7 @@
 
   <body class="flex flex-col items-center bg-mainBlack">
     <div class="flex flex-col items-center mobile:w-full sm:w-[470px]">
+      <!-- relative -->
       <header
         class="px-2.5 relative flex flex-col pt-2.5 mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
       >
@@ -272,6 +273,7 @@
         </div>
 
         <!-- Гамбургер меню -->
+        <!-- absolute -->
         <div
           class="absolute top-0 left-[-1280px] transition-left duration-500 transition-slowest ease bg-[url('./img/background_car_blur.jpeg')] bg-no-repeat bg-left pt-2.5 pb-[62px] mobile:w-full sm:w-[490px] md:w-[748px] text-mainWhite flex flex-col justify-left items-left bg-mainBlack xl:hidden"
           id="hamburger_menu"
@@ -525,10 +527,9 @@
             >
               <div class="flex flex-col">
                 <!-- Кузов -->
-                <!-- ontouchstart="showModal_1(this)" -->
                 <div
                   id="test"
-                  onclick="showModal_1(this)"
+                  onclick="showModal(modal_1)"
                   class="cursor-pointer flex items-center xl:items-start justify-between mobile:w-full md:w-[363px] h-[100px] md:h-[115px] xl:w-[288px] xl:h-[288px] 2xl:w-[388px] border border-mainWhite rounded-[20px] mt-[5px] md:mt-[8px] xl:mt-[3px] 2xl:mt-[5px]"
                 >
                   <p
@@ -546,7 +547,7 @@
 
                 <!-- Модальное окно - Кузов -->
                 <div
-                  class="fixed inset-0 items-center justify-center bg-mainBlack bg-opacity-80 transition-opacity hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center justify-center bg-mainBlack bg-opacity-80 transition-opacity hidden z-50"
                   id="modal_1"
                 >
                   <div
@@ -554,8 +555,7 @@
                   >
                     <div class="flex justify-end">
                       <svg
-                        onclick="closeModal_1(this)"
-                        ontouchstart="closeModal_1(this)"
+                        onclick="closeModal(modal_1)"
                         class="group cursor-pointer mt-3 mr-3"
                         id="close_icon_1-1"
                         width="60.000000"
@@ -741,7 +741,7 @@
 
                 <!-- Модальное окно - Двигатель -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_2"
                 >
                   <div
@@ -937,7 +937,7 @@
 
                 <!-- Модальное окно - Коробка -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_3"
                 >
                   <div
@@ -1131,7 +1131,7 @@
 
                 <!-- Модальное окно - Подвеска -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_4"
                 >
                   <div
@@ -1326,7 +1326,7 @@
 
                 <!-- Модальное окно - Диагностика -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_5"
                 >
                   <div
@@ -1519,7 +1519,7 @@
 
                 <!-- Модальное окно - Салон -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_6"
                 >
                   <div
@@ -1712,7 +1712,7 @@
 
                 <!-- Модальное окно - Документы -->
                 <div
-                  class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                  class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                   id="modal_7"
                 >
                   <div
@@ -1956,7 +1956,7 @@
 
               <!-- Модальное окно - Услуги 1 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_11"
               >
                 <div
@@ -2158,7 +2158,7 @@
 
               <!-- Модальное окно - Услуги 2 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_12"
               >
                 <div
@@ -2350,7 +2350,6 @@
                     Заказать
                   </button>
 
-                  <!-- data-modal-toggle="modal_13" -->
                   <button
                     onclick="showModal(modal_13)"
                     class="w-[298px] mobile:w-[358px] h-[55px] border rounded-[10px] bg-mainGray hover:bg-mainWhite hover:transition-color duration-300 font-inter text-[16px] font-normal leading-[19px] text-mainWhite hover:text-mainBlack mt-[10px] mb-[30px] mobile:mb-[45px]"
@@ -2362,10 +2361,6 @@
               </div>
 
               <!-- Модальное окно - Услуги 3 -->
-
-              <!--  tabindex="-1"
-                    aria-hidden="true"
-                    inset-0 -->
               <div
                 class="fixed top-0 left-[1px] right-[1px] bottom-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_13"
@@ -2524,40 +2519,8 @@
           </div>
         </section>
 
-        <div>
-          <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 21
-          </h1>
-          <h3 id="error_1" class="text-mainWhite"></h3>
-          <h3 id="error_2" class="text-mainWhite"></h3>
-          <h3 id="error_3" class="text-mainWhite"></h3>
-          <h3 id="error_4" class="text-mainWhite"></h3>
-          <h3 id="error_5" class="text-mainWhite"></h3>
-          <h3 id="error_6" class="text-mainWhite"></h3>
-          <h3 id="error_7" class="text-mainWhite"></h3>
-        </div>
-
         <!-- Шрифты -->
         <section class="w-full mt-[200px] pl-2.5">
-          <button
-            id="test_button"
-            onclick="OpenNote(this)"
-            ontouchstart="OpenNote(this)"
-            class="text-black bg-gray-400 px-4 py-2"
-          >
-            Нажми меня
-          </button>
-          <br /><br />
-          <div
-            onclick="OpenNote(this)"
-            ontouchstart="OpenNote(this)"
-            class="w-[200px] h-[50px] text-black bg-gray-400 px-4 py-2"
-          >
-            Нажми меня
-          </div>
-          <h3 id="test_text" class="text-mainWhite"></h3>
-          <h3 id="test_text_1" class="text-mainWhite hidden">TEST1</h3>
-
           <!-- <h1 class="font-lobster text-[24px] text-mainWhite font-regular">
             Принимая во внимание
           </h1>
@@ -2589,97 +2552,17 @@
         ham.classList.remove("left-0");
       }
 
-      // Тестовая кнопка
-      // function OpenNote(event) {
-      //   let text = document.getElementById("test_text");
-      //   let text_1 = document.getElementById("test_text_1");
-
-      //   text.innerText = `Меня нажали событие ${event.type}`;
-      //   text_1.classList.remove("hidden");
-      //   text_1.classList.add("bg-green-500");
-      // }
-
-      function OpenNote(elem) {
-        let text = document.getElementById("test_text");
-        let text_1 = document.getElementById("test_text_1");
-
-        text.innerText = `Меня нажали элемент: ${elem}`;
-        text_1.classList.remove("hidden");
-        text_1.classList.add("bg-green-500");
-      }
-
       // Модальные окна
       function showModal(modal) {
-        // const el = document.getElementById(modal);
-        // el.classList.remove("hidden");
         modal.classList.remove("hidden");
         modal.classList.add("flex");
       }
 
-      const testEl = document.getElementById("test");
-      testEl.addEventListener("touchstart", (event) => {
-        event.preventDefault();
-
-        let text = document.getElementById("test_text");
-        let text_1 = document.getElementById("test_text_1");
-
-        text.innerText = `Кнопка сработала`;
-        text_1.classList.remove("hidden");
-        text_1.classList.add("bg-blue-500");
-
-        showModal_1(event.target);
-      });
-
-      function showModal_1(elem) {
-        elem.nextElementSibling.classList.remove("hidden");
-      }
-
-      const error_1 = document.getElementById("error_1");
-      const error_2 = document.getElementById("error_2");
-      const error_3 = document.getElementById("error_3");
-      const error_4 = document.getElementById("error_4");
-      const error_5 = document.getElementById("error_5");
-      const error_6 = document.getElementById("error_6");
-      const error_7 = document.getElementById("error_7");
-
-      function showModal_2(modal) {
-        error_1.innerText = "Клик сработал, вошел в функцию";
-        let classList = modal.className;
-        error_2.innerText = classList;
-        console.log(classList);
-
-        modal.classList.remove("invisible");
-        error_3.innerText = "Удалил invisible";
-        let classList_1 = modal.className;
-        error_4.innerText = classList_1;
-
-        modal.classList.add("visible");
-        error_5.innerText = "Добавил visible";
-        let classList_2 = modal.className;
-        error_6.innerText = classList_2;
-
-        error_7.innerText = "Конец функции";
-      }
-
-      function showModalTablet(event, modal) {
-        const el = document.getElementById(modal);
-        el.classList.remove("hidden");
-      }
-
       function closeModal(modal) {
+        modal.classList.remove("flex");
         modal.classList.add("hidden");
       }
 
-      function closeModal_1(elem) {
-        const targetElem = elem.parentElement.parentElement.parentElement;
-        targetElem.classList.remove("flex");
-        targetElem.classList.add("hidden");
-      }
-
-      function closeModal_2(modal) {
-        modal.classList.remove("visible");
-        modal.classList.add("invisible");
-      }
     </script>
   </body>
 </html>
