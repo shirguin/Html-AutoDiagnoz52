@@ -2350,10 +2350,11 @@
                     Заказать
                   </button>
 
+                  <!-- data-modal-toggle="modal_13" -->
                   <button
                     onclick="showModal(modal_13)"
                     class="w-[298px] mobile:w-[358px] h-[55px] border rounded-[10px] bg-mainGray hover:bg-mainWhite hover:transition-color duration-300 font-inter text-[16px] font-normal leading-[19px] text-mainWhite hover:text-mainBlack mt-[10px] mb-[30px] mobile:mb-[45px]"
-                    data-modal-toggle="modal_13"
+                    
                   >
                     Подробнее
                   </button>
@@ -2361,11 +2362,14 @@
               </div>
 
               <!-- Модальное окно - Услуги 3 -->
+
+              <!--  tabindex="-1"
+                    aria-hidden="true"
+                    inset-0 -->
               <div
-                class="fixed inset-0 items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
+                class="fixed top-[3%] left-[3%] right-[3%] bottom-[3%] items-center bg-mainBlack bg-opacity-80 transition-opacity justify-center hidden z-50"
                 id="modal_13"
-                tabindex="-1"
-                aria-hidden="true"
+
               >
                 <div
                   class="w-[340px] h-[470px] md:w-[768px] md:h-[550px] rounded-[25px] bg-secondBlack"
@@ -2522,7 +2526,7 @@
 
         <div>
           <h1 class="font-inter text-[24px] text-mainWhite font-black">
-            Тест кнопок - 19
+            Тест кнопок - 20
           </h1>
           <h3 id="error_1" class="text-mainWhite"></h3>
           <h3 id="error_2" class="text-mainWhite"></h3>
