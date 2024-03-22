@@ -32,7 +32,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
 
-  <body class="flex flex-col items-center bg-mainBlack">
+  <body class="flex flex-col items-center bg-mainBlack font-inter">
     <div class="flex flex-col items-center mobile:w-full sm:w-[470px]">
       <header
         class="px-2.5 relative flex flex-col pt-2.5 mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
@@ -2517,7 +2517,7 @@
 
         <!-- Четвертый блок -->
         <section
-          class="px-2.5 flex flex-col items-center mobile:w-full"
+          class="px-2.5 flex flex-col items-center mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px]"
           style="background: linear-gradient(180deg, #000000, #6c6c6c)"
         >
           <!-- Заголовок -->
@@ -2530,34 +2530,121 @@
           </div>
 
           <!-- Слайдер -->
-          <div class="flex border border-mainGray rounded-[25px] shadow-black">
-            <div class="">
-              <img class=" rounded-t-[25px]" src="./img/slider/image 447.png" alt="foto auto">
-              <div class="flex justify-between">
+          <div
+            class="flex flex-col items-start mobile:w-full sm:w-[470px] md:w-[738px] xl:w-[1170px] 2xl:w-[1575px] border border-mainGray rounded-[25px] shadow-black"
+          >
 
-                <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <desc>
-                      Created with Pixso.
-                  </desc>
-                  <defs/>
-                  <rect id="Component 56" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
-                  <circle id="Ellipse 11" cx="20.000000" cy="20.000000" r="20.000000" fill="#B91C23" fill-opacity="1.000000"/>
-                  <path id="Polygon 12" d="M22.21 14.78L15.09 19.93L22.21 25.07L23.38 23.44L17.38 19.11L16.79 19.93L17.38 20.74L23.38 16.41L22.21 14.78Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
-                </svg>
-                
-                <svg width="40.000000" height="40.000000" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <desc>
-                      Created with Pixso.
-                  </desc>
-                  <defs/>
-                  <rect id="Component 58" width="40.000000" height="40.000000" fill="#FFFFFF" fill-opacity="0"/>
-                  <circle id="Ellipse 12" cx="20.000000" cy="20.000000" r="20.000000" fill="#B91C23" fill-opacity="1.000000"/>
-                  <path id="Polygon 11" d="M18.58 15.05L25.7 20.2L18.58 25.34L17.41 23.71L23.41 19.38L24 20.2L23.41 21.01L17.41 16.68L18.58 15.05Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="evenodd"/>
-                </svg>
-                
+            <!-- Фото -->
+            <div class="relative mobile:w-full sm:w-[470px] md:w-[738px]">
+              <img
+                class="rounded-t-[25px]"
+                src="./img/slider/image 447.png"
+                alt="foto auto"
+              />
+
+              <div class="absolute left-0 top-5 flex h-[40px]">
+                <div class="w-[10px] bg-mainRed"></div>
+                <div
+                  class="pl-[10px] bg-mainBlack flex flex-col justify-center font-inter text-mainWhite"
+                >
+                  <span class=" text-[8px] uppercase">Hundai Tucson 2.0AT(2018 г.)</span>
+                  <span class=" text-[12px] font-bold">2 050 000 руб.</span>
+                </div>
+
+                <div
+                  class="inline-block w-0 h-0 border-solid border-t-[40px] border-r-[20px] border-l-0 border-b-0 border-l-transparent border-r-transparent border-t-mainBlack border-b-transparent"
+                ></div>
               </div>
+
+              <img
+                class="w-[70px] absolute left-2 bottom-2"
+                src="./img/logo 3.svg"
+                alt="logo"
+              />
+              <svg
+                class="absolute left-5 bottom-5"
+                width="40.000000"
+                height="40.000000"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <rect
+                  id="Component 56"
+                  width="40.000000"
+                  height="40.000000"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <circle
+                  id="Ellipse 11"
+                  cx="20.000000"
+                  cy="20.000000"
+                  r="20.000000"
+                  fill="#B91C23"
+                  fill-opacity="1.000000"
+                />
+                <path
+                  id="Polygon 12"
+                  d="M22.21 14.78L15.09 19.93L22.21 25.07L23.38 23.44L17.38 19.11L16.79 19.93L17.38 20.74L23.38 16.41L22.21 14.78Z"
+                  fill="#FFFFFF"
+                  fill-opacity="1.000000"
+                  fill-rule="evenodd"
+                />
+              </svg>
+
+              <svg
+                class="absolute right-5 bottom-5"
+                width="40.000000"
+                height="40.000000"
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <desc>Created with Pixso.</desc>
+                <defs />
+                <rect
+                  id="Component 58"
+                  width="40.000000"
+                  height="40.000000"
+                  fill="#FFFFFF"
+                  fill-opacity="0"
+                />
+                <circle
+                  id="Ellipse 12"
+                  cx="20.000000"
+                  cy="20.000000"
+                  r="20.000000"
+                  fill="#B91C23"
+                  fill-opacity="1.000000"
+                />
+                <path
+                  id="Polygon 11"
+                  d="M18.58 15.05L25.7 20.2L18.58 25.34L17.41 23.71L23.41 19.38L24 20.2L23.41 21.01L17.41 16.68L18.58 15.05Z"
+                  fill="#FFFFFF"
+                  fill-opacity="1.000000"
+                  fill-rule="evenodd"
+                />
+              </svg>
             </div>
 
+            <!-- Контент -->
+            <div class="flex flex-col justify-start pl-[30px] rounded-b-[25px] bg-mainBlack mobile:w-full sm:w-[470px] md:w-[738px]">
+              <h3 class=" mt-[44px] text-[20px] text-mainWhite font-semibold leading-[24px]">Автоподбор для Ирины</h3>
+
+              <p class="mt-5 text-[12px] text-mainWhite leading-[25px]"><b>Модель:</b> Opel Mokka 1.4AT</p>
+              <p class="text-[12px] text-mainWhite leading-[25px]"><b>Год:</b> 2014</p>
+              <p class="text-[12px] text-mainWhite leading-[25px]"><b>Владельцев:</b> 1</p>
+              <p class="text-[12px] text-mainWhite leading-[25px]"><b>ПТС:</b> оригинал</p>
+              <p class="text-[12px] text-mainWhite leading-[25px]"><b>Результат диагностики:</b> заменить масло в ДВС, прокладку КК, желательно масло в АКПП, желательно сайлентблоки задней балки. Крашенных элементов:0 шт.(присутствует замятие на заднем крыле, в остальном идеальное состояние ЛКП, родная оптика, ролностью заводское остекленение)</p>
+              <p class="text-[12px] text-mainWhite leading-[25px]"><b>Салон:</b> в идеальном состоянии (хим.чистка не требуется)</p>
+              <p class="text-[12px] text-mainWhite leading-[25px]"><b>Юр.чистота:</b> Машина без залогов и ограничений. Юридически чистая и уже поставлена на учет новым владельцем.</p>
+              <p class=" mb-[44px] text-[12px] text-mainWhite leading-[25px]"><b>На поиск ушло:</b> 1 месяц и 3 дня</p>
+            </div>
           </div>
         </section>
 
